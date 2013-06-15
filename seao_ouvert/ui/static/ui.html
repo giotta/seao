@@ -23,10 +23,23 @@
   <body ng-controller="MainCtrl">
     <div role="main">
       <div class="row">
-	<h1 class="span12">SEAO - Accès aux données ouvertes</h1>
+        <h1 class="span12">SEAO - Accès aux données ouvertes</h1>
       </div>
       <div class="row">
-	<div class="span12 gridStyle" ng-grid="gridOptions"></div>
+        <form>
+          <div class="span12">
+	    <label>Sélection des colonnes:</label>
+            <button data-ng-class="{'btn-primary': selectedColumns[col]}"
+                    class="btn columnSelection"
+                    ng-repeat="col in availColumns"
+                    ng-click="selectedColumns[col] = !selectedColumns[col]; $emit('colChanged', selectedColumns)">
+              {{ col }}
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="span12 gridStyle" ng-grid="gridOptions"></div>
       </div>
     </div>
   </body>
