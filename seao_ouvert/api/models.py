@@ -1,3 +1,5 @@
+# coding: utf-8
+
 from django.db import models
 
 
@@ -9,35 +11,60 @@ class ChoiceValue(models.Model):
 
 
 class Province(ChoiceValue):
-    pass
-
+    def __unicode__(self):
+        return "%s" % (self.name,)
 
 class Type(ChoiceValue):
-    pass
+    def __unicode__(self):
+        return "%s" % (self.name,)
 
 
 class Nature(ChoiceValue):
-    pass
+    def __unicode__(self):
+        return "%s" % (self.name,)
 
 
 class Region(ChoiceValue):
-    pass
+    def __unicode__(self):
+        return "%s" % (self.name,)
+
+    class Meta:
+        verbose_name = u"Région"
+        verbose_name_plural = u"Régions"
 
 
 class Disposition(ChoiceValue):
-    pass
+    def __unicode__(self):
+        return "%s" % (self.name,)
 
 
 class Pays(ChoiceValue):
-    pass
+    def __unicode__(self):
+        return "%s" % (self.name,)
+
+    class Meta:
+        verbose_name = u"Pays"
+        verbose_name_plural = u"Pays"
 
 
 class UniteMontant(ChoiceValue):
-    pass
+
+    def __unicode__(self):
+        return "%s" % (self.name,)
+
+    class Meta:
+        verbose_name = u"Unité de montant"
+        verbose_name_plural = u"Unités de montant"
 
 
 class UNSPSC(ChoiceValue):
-    pass
+
+    def __unicode__(self):
+        return "%s" % (self.name,)
+
+    class Meta:
+        verbose_name = u"UNSPSC"
+        verbose_name_plural = u"UNSPSC"
 
 
 class Avis(models.Model):
@@ -118,6 +145,12 @@ class Avis(models.Model):
         blank=True,
         )
 
+    def __unicode__(self):
+        return "%s (%d)" % (self.titre, self.numero_seao)
+
+    class Meta:
+        verbose_name = u"Avis"
+        verbose_name_plural = u"Avis"
 
 class Soumission(models.Model):
     nom_organisation = models.CharField(
@@ -172,3 +205,6 @@ class Soumission(models.Model):
         Avis,
         related_name='soumissions',
         )
+
+    def __unicode__(self):
+        return "%s" % (self.nom_organisation,)
