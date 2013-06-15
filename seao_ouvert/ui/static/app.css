@@ -6,3 +6,7 @@
 .columnSelection {
     margin: 5px;
 }
+
+#mainGrid {
+    min-height: 600px;
+}
