@@ -9,6 +9,6 @@ avis_resource = AvisResource()
 
 urlpatterns = patterns(
     '',
-    url(r'^api/', include(avis_resource.urls)),
+    url(r'^api/v1/', include(avis_resource.urls)),
     url(r'^admin/', include(admin.site.urls)),
 )
