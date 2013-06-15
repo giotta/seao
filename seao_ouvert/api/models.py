@@ -5,7 +5,7 @@ from django.db import models
 
 class ChoiceValue(models.Model):
     code = models.CharField(max_length=3)
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=512)
     class Meta:
         abstract = True
 

@@ -4,7 +4,8 @@ from .models import (
     Type,
     Nature,
     Region,
-    Disposition,
+    DispositionNonMunicipale,
+    DispositionMunicipale,
     Pays,
     UniteMontant,
     UNSPSC,
@@ -16,7 +17,8 @@ admin.site.register(Province)
 admin.site.register(Type)
 admin.site.register(Nature)
 admin.site.register(Region)
-admin.site.register(Disposition)
+admin.site.register(DispositionMunicipale)
+admin.site.register(DispositionNonMunicipale)
 admin.site.register(Pays)
 admin.site.register(UniteMontant)
 admin.site.register(UNSPSC)

@@ -1,0 +1,2546 @@
+[
+{
+    "pk": 1, 
+    "model": "api.province", 
+    "fields": {
+        "code": "AL", 
+        "name": "Alabama"
+    }
+},
+{
+    "pk": 2, 
+    "model": "api.province", 
+    "fields": {
+        "code": "AK", 
+        "name": "Alaska"
+    }
+},
+{
+    "pk": 3, 
+    "model": "api.province", 
+    "fields": {
+        "code": "AZ", 
+        "name": "Arizona"
+    }
+},
+{
+    "pk": 4, 
+    "model": "api.province", 
+    "fields": {
+        "code": "AR", 
+        "name": "Arkansas"
+    }
+},
+{
+    "pk": 5, 
+    "model": "api.province", 
+    "fields": {
+        "code": "CA", 
+        "name": "Californie"
+    }
+},
+{
+    "pk": 6, 
+    "model": "api.province", 
+    "fields": {
+        "code": "NC", 
+        "name": "Caroline Du Nord"
+    }
+},
+{
+    "pk": 7, 
+    "model": "api.province", 
+    "fields": {
+        "code": "SC", 
+        "name": "Caroline Du Sud"
+    }
+},
+{
+    "pk": 8, 
+    "model": "api.province", 
+    "fields": {
+        "code": "CO", 
+        "name": "Colorado"
+    }
+},
+{
+    "pk": 9, 
+    "model": "api.province", 
+    "fields": {
+        "code": "CT", 
+        "name": "Connecticut"
+    }
+},
+{
+    "pk": 10, 
+    "model": "api.province", 
+    "fields": {
+        "code": "ND", 
+        "name": "Dakota Du Nord"
+    }
+},
+{
+    "pk": 11, 
+    "model": "api.province", 
+    "fields": {
+        "code": "SD", 
+        "name": "Dakota Du Sud"
+    }
+},
+{
+    "pk": 12, 
+    "model": "api.province", 
+    "fields": {
+        "code": "DE", 
+        "name": "Delaware"
+    }
+},
+{
+    "pk": 13, 
+    "model": "api.province", 
+    "fields": {
+        "code": "DC", 
+        "name": "District De Columbia"
+    }
+},
+{
+    "pk": 14, 
+    "model": "api.province", 
+    "fields": {
+        "code": "FL", 
+        "name": "Floride"
+    }
+},
+{
+    "pk": 15, 
+    "model": "api.province", 
+    "fields": {
+        "code": "GA", 
+        "name": "G\u00e9orgie"
+    }
+},
+{
+    "pk": 16, 
+    "model": "api.province", 
+    "fields": {
+        "code": "HI", 
+        "name": "Hawa\u00ef"
+    }
+},
+{
+    "pk": 17, 
+    "model": "api.province", 
+    "fields": {
+        "code": "ID", 
+        "name": "Idaho"
+    }
+},
+{
+    "pk": 18, 
+    "model": "api.province", 
+    "fields": {
+        "code": "IL", 
+        "name": "Illinois"
+    }
+},
+{
+    "pk": 19, 
+    "model": "api.province", 
+    "fields": {
+        "code": "IN", 
+        "name": "Indiana"
+    }
+},
+{
+    "pk": 20, 
+    "model": "api.province", 
+    "fields": {
+        "code": "IA", 
+        "name": "Iowa"
+    }
+},
+{
+    "pk": 21, 
+    "model": "api.province", 
+    "fields": {
+        "code": "KS", 
+        "name": "Kansas"
+    }
+},
+{
+    "pk": 22, 
+    "model": "api.province", 
+    "fields": {
+        "code": "KY", 
+        "name": "Kentucky"
+    }
+},
+{
+    "pk": 23, 
+    "model": "api.province", 
+    "fields": {
+        "code": "LA", 
+        "name": "Louisiane"
+    }
+},
+{
+    "pk": 24, 
+    "model": "api.province", 
+    "fields": {
+        "code": "ME", 
+        "name": "Maine"
+    }
+},
+{
+    "pk": 25, 
+    "model": "api.province", 
+    "fields": {
+        "code": "MD", 
+        "name": "Maryland"
+    }
+},
+{
+    "pk": 26, 
+    "model": "api.province", 
+    "fields": {
+        "code": "MA", 
+        "name": "Massachusetts"
+    }
+},
+{
+    "pk": 27, 
+    "model": "api.province", 
+    "fields": {
+        "code": "MI", 
+        "name": "Michigan"
+    }
+},
+{
+    "pk": 28, 
+    "model": "api.province", 
+    "fields": {
+        "code": "MN", 
+        "name": "Minnesota"
+    }
+},
+{
+    "pk": 29, 
+    "model": "api.province", 
+    "fields": {
+        "code": "MS", 
+        "name": "Mississippi"
+    }
+},
+{
+    "pk": 30, 
+    "model": "api.province", 
+    "fields": {
+        "code": "MO", 
+        "name": "Missouri"
+    }
+},
+{
+    "pk": 31, 
+    "model": "api.province", 
+    "fields": {
+        "code": "MT", 
+        "name": "Montana"
+    }
+},
+{
+    "pk": 32, 
+    "model": "api.province", 
+    "fields": {
+        "code": "NE", 
+        "name": "Nebraska"
+    }
+},
+{
+    "pk": 33, 
+    "model": "api.province", 
+    "fields": {
+        "code": "NV", 
+        "name": "Nevada"
+    }
+},
+{
+    "pk": 34, 
+    "model": "api.province", 
+    "fields": {
+        "code": "NH", 
+        "name": "New Hampshire"
+    }
+},
+{
+    "pk": 35, 
+    "model": "api.province", 
+    "fields": {
+        "code": "NJ", 
+        "name": "New Jersey"
+    }
+},
+{
+    "pk": 36, 
+    "model": "api.province", 
+    "fields": {
+        "code": "NY", 
+        "name": "New York"
+    }
+},
+{
+    "pk": 37, 
+    "model": "api.province", 
+    "fields": {
+        "code": "NM", 
+        "name": "Nouveau Mexique"
+    }
+},
+{
+    "pk": 38, 
+    "model": "api.province", 
+    "fields": {
+        "code": "OH", 
+        "name": "Ohio"
+    }
+},
+{
+    "pk": 39, 
+    "model": "api.province", 
+    "fields": {
+        "code": "OK", 
+        "name": "Oklahoma"
+    }
+},
+{
+    "pk": 40, 
+    "model": "api.province", 
+    "fields": {
+        "code": "OR", 
+        "name": "Oregon"
+    }
+},
+{
+    "pk": 41, 
+    "model": "api.province", 
+    "fields": {
+        "code": "PA", 
+        "name": "Pennsylvanie"
+    }
+},
+{
+    "pk": 42, 
+    "model": "api.province", 
+    "fields": {
+        "code": "RI", 
+        "name": "Rhode Island"
+    }
+},
+{
+    "pk": 43, 
+    "model": "api.province", 
+    "fields": {
+        "code": "TN", 
+        "name": "Tennessee"
+    }
+},
+{
+    "pk": 44, 
+    "model": "api.province", 
+    "fields": {
+        "code": "TX", 
+        "name": "Texas"
+    }
+},
+{
+    "pk": 45, 
+    "model": "api.province", 
+    "fields": {
+        "code": "UT", 
+        "name": "Utah"
+    }
+},
+{
+    "pk": 46, 
+    "model": "api.province", 
+    "fields": {
+        "code": "VT", 
+        "name": "Vermont"
+    }
+},
+{
+    "pk": 47, 
+    "model": "api.province", 
+    "fields": {
+        "code": "VA", 
+        "name": "Virginie"
+    }
+},
+{
+    "pk": 48, 
+    "model": "api.province", 
+    "fields": {
+        "code": "WV", 
+        "name": "Virginie de l'Ouest"
+    }
+},
+{
+    "pk": 49, 
+    "model": "api.province", 
+    "fields": {
+        "code": "WA", 
+        "name": "Washington"
+    }
+},
+{
+    "pk": 50, 
+    "model": "api.province", 
+    "fields": {
+        "code": "WI", 
+        "name": "Wisconsin"
+    }
+},
+{
+    "pk": 51, 
+    "model": "api.province", 
+    "fields": {
+        "code": "WY", 
+        "name": "Wyoming"
+    }
+},
+{
+    "pk": 52, 
+    "model": "api.province", 
+    "fields": {
+        "code": "AB", 
+        "name": "Alberta"
+    }
+},
+{
+    "pk": 53, 
+    "model": "api.province", 
+    "fields": {
+        "code": "BC", 
+        "name": "Colombie-Britannique"
+    }
+},
+{
+    "pk": 54, 
+    "model": "api.province", 
+    "fields": {
+        "code": "PE", 
+        "name": "\u00cele-du-Prince-\u00c9douard"
+    }
+},
+{
+    "pk": 55, 
+    "model": "api.province", 
+    "fields": {
+        "code": "MB", 
+        "name": "Manitoba"
+    }
+},
+{
+    "pk": 56, 
+    "model": "api.province", 
+    "fields": {
+        "code": "NB", 
+        "name": "Nouveau-Brunswick"
+    }
+},
+{
+    "pk": 57, 
+    "model": "api.province", 
+    "fields": {
+        "code": "NS", 
+        "name": "Nouvelle-\u00c9cosse"
+    }
+},
+{
+    "pk": 58, 
+    "model": "api.province", 
+    "fields": {
+        "code": "ON", 
+        "name": "Ontario"
+    }
+},
+{
+    "pk": 59, 
+    "model": "api.province", 
+    "fields": {
+        "code": "QC", 
+        "name": "Qu\u00e9bec"
+    }
+},
+{
+    "pk": 60, 
+    "model": "api.province", 
+    "fields": {
+        "code": "SK", 
+        "name": "Saskatchewan"
+    }
+},
+{
+    "pk": 61, 
+    "model": "api.province", 
+    "fields": {
+        "code": "NF", 
+        "name": "Terre-Neuve-et-Labrador"
+    }
+},
+{
+    "pk": 62, 
+    "model": "api.province", 
+    "fields": {
+        "code": "NT", 
+        "name": "Territoires du Nord-Ouest/Nunavut"
+    }
+},
+{
+    "pk": 63, 
+    "model": "api.province", 
+    "fields": {
+        "code": "YT", 
+        "name": "Yukon"
+    }
+},
+{
+    "pk": 1, 
+    "model": "api.type", 
+    "fields": {
+        "code": "3", 
+        "name": "Contrat adjug\u00e9 suite \u00e0 un appel d\u2019offres public"
+    }
+},
+{
+    "pk": 2, 
+    "model": "api.type", 
+    "fields": {
+        "code": "9", 
+        "name": "Contrat octroy\u00e9 de gr\u00e9 \u00e0 gr\u00e9"
+    }
+},
+{
+    "pk": 3, 
+    "model": "api.type", 
+    "fields": {
+        "code": "10", 
+        "name": "Contrat adjug\u00e9 suite \u00e0 un appel d\u2019offres sur invitations"
+    }
+},
+{
+    "pk": 4, 
+    "model": "api.type", 
+    "fields": {
+        "code": "14", 
+        "name": "Contrat adjug\u00e9 suite \u00e0 un appel d\u2019offres sur invitations"
+    }
+},
+{
+    "pk": 1, 
+    "model": "api.nature", 
+    "fields": {
+        "code": "1", 
+        "name": "Approvisionnement (biens)"
+    }
+},
+{
+    "pk": 2, 
+    "model": "api.nature", 
+    "fields": {
+        "code": "2", 
+        "name": "Services"
+    }
+},
+{
+    "pk": 3, 
+    "model": "api.nature", 
+    "fields": {
+        "code": "3", 
+        "name": "Travaux de construction"
+    }
+},
+{
+    "pk": 4, 
+    "model": "api.nature", 
+    "fields": {
+        "code": "6", 
+        "name": "Concession"
+    }
+},
+{
+    "pk": 5, 
+    "model": "api.nature", 
+    "fields": {
+        "code": "7", 
+        "name": "Vente de biens immeubles"
+    }
+},
+{
+    "pk": 6, 
+    "model": "api.nature", 
+    "fields": {
+        "code": "8", 
+        "name": "Vente de biens meubles"
+    }
+},
+{
+    "pk": 7, 
+    "model": "api.nature", 
+    "fields": {
+        "code": "5", 
+        "name": "Autre"
+    }
+},
+{
+    "pk": 1, 
+    "model": "api.region", 
+    "fields": {
+        "code": "1", 
+        "name": "Bas St-Laurent"
+    }
+},
+{
+    "pk": 2, 
+    "model": "api.region", 
+    "fields": {
+        "code": "2", 
+        "name": "Saguenay-Lac-St-Jean"
+    }
+},
+{
+    "pk": 3, 
+    "model": "api.region", 
+    "fields": {
+        "code": "3", 
+        "name": "Capitale Nationale"
+    }
+},
+{
+    "pk": 4, 
+    "model": "api.region", 
+    "fields": {
+        "code": "4", 
+        "name": "Mauricie"
+    }
+},
+{
+    "pk": 5, 
+    "model": "api.region", 
+    "fields": {
+        "code": "5", 
+        "name": "Estrie"
+    }
+},
+{
+    "pk": 6, 
+    "model": "api.region", 
+    "fields": {
+        "code": "6", 
+        "name": "Montr\u00e9al"
+    }
+},
+{
+    "pk": 7, 
+    "model": "api.region", 
+    "fields": {
+        "code": "7", 
+        "name": "Outaouais"
+    }
+},
+{
+    "pk": 8, 
+    "model": "api.region", 
+    "fields": {
+        "code": "8", 
+        "name": "Abitibi-T\u00e9miscaminque"
+    }
+},
+{
+    "pk": 9, 
+    "model": "api.region", 
+    "fields": {
+        "code": "9", 
+        "name": "C\u00f4te-Nord"
+    }
+},
+{
+    "pk": 10, 
+    "model": "api.region", 
+    "fields": {
+        "code": "11", 
+        "name": "Nord-du-Qu\u00e9bec"
+    }
+},
+{
+    "pk": 11, 
+    "model": "api.region", 
+    "fields": {
+        "code": "12", 
+        "name": "Chaudi\u00e8re-Appalaches"
+    }
+},
+{
+    "pk": 12, 
+    "model": "api.region", 
+    "fields": {
+        "code": "13", 
+        "name": "Laval"
+    }
+},
+{
+    "pk": 13, 
+    "model": "api.region", 
+    "fields": {
+        "code": "14", 
+        "name": "Laurentides"
+    }
+},
+{
+    "pk": 14, 
+    "model": "api.region", 
+    "fields": {
+        "code": "15", 
+        "name": "Mont\u00e9r\u00e9gie"
+    }
+},
+{
+    "pk": 15, 
+    "model": "api.region", 
+    "fields": {
+        "code": "16", 
+        "name": "Lanaudi\u00e8re"
+    }
+},
+{
+    "pk": 16, 
+    "model": "api.region", 
+    "fields": {
+        "code": "17", 
+        "name": "Centre-du-Qu\u00e9bec"
+    }
+},
+{
+    "pk": 17, 
+    "model": "api.region", 
+    "fields": {
+        "code": "18", 
+        "name": "Gasp\u00e9sie-Iles-de-la-Madeleine"
+    }
+},
+{
+    "pk": 18, 
+    "model": "api.region", 
+    "fields": {
+        "code": "19", 
+        "name": "Hors Qu\u00e9bec"
+    }
+},
+{
+    "pk": 1, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "1", 
+        "name": "Paragraphe 1\u00b0 : Situation d'urgence o\u00f9 la s\u00e9curit\u00e9 des personnes ou des biens est en cause"
+    }
+},
+{
+    "pk": 2, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "2", 
+        "name": "Paragraphe 2\u00b0 : Un seul contractant est possible en raison d'une garantie, d'un droit de propri\u00e9t\u00e9, d'un droit exclusif, etc."
+    }
+},
+{
+    "pk": 3, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "3", 
+        "name": "Paragraphe 4\u00b0 : Possibilit\u00e9 de d\u00e9montrer qu'un appel d'offres public ne servirait pas l'int\u00e9r\u00eat public;"
+    }
+},
+{
+    "pk": 4, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "4", 
+        "name": "Autorisation du gouvernement ou du ministre responsable."
+    }
+},
+{
+    "pk": 5, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "5", 
+        "name": "Acquisition de sable, de pierre, de gravier, ou d'enrob\u00e9s bitumineux comportant une d\u00e9pense inf\u00e9rieure \u00e0 200 000 $."
+    }
+},
+{
+    "pk": 6, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "6", 
+        "name": "Contrat li\u00e9 \u00e0 des activit\u00e9s de recherche et de d\u00e9veloppement ou \u00e0 des activit\u00e9s d'enseignement."
+    }
+},
+{
+    "pk": 7, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "7", 
+        "name": "Contrat pour des activit\u00e9s \u00e0 l'\u00e9tranger d'une d\u00e9l\u00e9gation ou organisation permettant la repr\u00e9sentation du Qu\u00e9bec \u00e0 l'\u00e9tranger."
+    }
+},
+{
+    "pk": 8, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "8", 
+        "name": "Contrat pour des activit\u00e9s \u00e0 l'\u00e9tranger d'une d\u00e9l\u00e9gation ou organisation permettant la repr\u00e9sentation du Qu\u00e9bec \u00e0 l'\u00e9tranger."
+    }
+},
+{
+    "pk": 9, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "9", 
+        "name": "Contrat de services juridiques."
+    }
+},
+{
+    "pk": 10, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "10", 
+        "name": "Contrat de services financiers ou bancaires."
+    }
+},
+{
+    "pk": 11, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "11", 
+        "name": "Contrat pour des activit\u00e9s \u00e0 l\u2019\u00e9tranger d\u2019une d\u00e9l\u00e9gation ou organisation permettant la repr\u00e9sentation du Qu\u00e9bec \u00e0 l\u2019\u00e9tranger."
+    }
+},
+{
+    "pk": 12, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "12", 
+        "name": "Contrat de services pour l'engagement d'un enqu\u00eateur, d'un conciliateur, d'un n\u00e9gociateur, d'un m\u00e9diateur, d'un arbitre, d'un m\u00e9decin ou d'un dentiste en mati\u00e8re d'\u00e9valuation m\u00e9dicale li\u00e9e \u00e0 leur sp\u00e9cialit\u00e9 ou d'une personne devant agir \u00e0 titre de t\u00e9moin expert devant un tribunal."
+    }
+},
+{
+    "pk": 13, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "13", 
+        "name": "Contrat \u00e0 commandes pour l'acquisition de logiciels."
+    }
+},
+{
+    "pk": 14, 
+    "model": "api.dispositionnonmunicipale", 
+    "fields": {
+        "code": "14", 
+        "name": "Contrat dont le montant est inf\u00e9rieur au seuil d'appel d'offres public."
+    }
+},
+{
+    "pk": 1, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "1", 
+        "name": "Renouvellement de contrats d\u2019assurance"
+    }
+},
+{
+    "pk": 2, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "2", 
+        "name": "Situation d\u2019urgence"
+    }
+},
+{
+    "pk": 3, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "3", 
+        "name": "Par. 1\u00b0 Tarif fix\u00e9 ou approuv\u00e9 par le gouvernement ou un de ses ministres"
+    }
+},
+{
+    "pk": 4, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "4", 
+        "name": "Par. 2\u00b0 Contrat conclu avec un organisme public"
+    }
+},
+{
+    "pk": 5, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "5", 
+        "name": "Par. 2\u00b0 Possibilit\u00e9 de d\u00e9montrer qu\u2019il s\u2019agit d\u2019une situation de fournisseur unique"
+    }
+},
+{
+    "pk": 6, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "6", 
+        "name": "Contrat conclu avec un organisme \u00e0 but non lucratif"
+    }
+},
+{
+    "pk": 7, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "7", 
+        "name": "Contrat de services de camionnage en vrac"
+    }
+},
+{
+    "pk": 8, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "8", 
+        "name": "Contrat de fourniture de biens ou de services li\u00e9s au domaine artistique ou culturel"
+    }
+},
+{
+    "pk": 9, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "9", 
+        "name": "Contrat de fourniture d\u2019abonnements ou de logiciels destin\u00e9s \u00e0 des fins \u00e9ducatives"
+    }
+},
+{
+    "pk": 10, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "10", 
+        "name": "Contrat de fourniture d\u2019espaces m\u00e9dias"
+    }
+},
+{
+    "pk": 11, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "11", 
+        "name": "Contrat particulier relatif \u00e0 l\u2019utilisation de logiciels et de progiciels"
+    }
+},
+{
+    "pk": 12, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "12", 
+        "name": "Contrat relatif \u00e0 des conduites conclu avec leur propri\u00e9taire ou avec une entreprise d\u2019utilit\u00e9 publique"
+    }
+},
+{
+    "pk": 13, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "13", 
+        "name": "Contrat conclu avec un fournisseur en situation de monopole dans le domaine des communications, de l\u2019\u00e9lectricit\u00e9 ou du gaz"
+    }
+},
+{
+    "pk": 14, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "14", 
+        "name": "Contrat relatif \u00e0 l\u2019entretien d\u2019\u00e9quipements sp\u00e9cialis\u00e9s qui doit \u00eatre fait par le fabricant"
+    }
+},
+{
+    "pk": 15, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "15", 
+        "name": "Contrat relatif \u00e0 des travaux sur l\u2019emprise d\u2019une voie ferr\u00e9e conclu avec son propri\u00e9taire ou son exploitant"
+    }
+},
+{
+    "pk": 16, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "16", 
+        "name": "Contrat de fourniture de biens conclu \u00e0 des conditions exceptionnellement avantageuses"
+    }
+},
+{
+    "pk": 17, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "17", 
+        "name": "Contrat de services n\u00e9cessaires dans le cadre d\u2019un recours devant les tribunaux"
+    }
+},
+{
+    "pk": 18, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "18", 
+        "name": "Contrat de services rendus par un dentiste, un infirmier, un m\u00e9decin, un m\u00e9decin-v\u00e9t\u00e9rinaire ou un pharmacien"
+    }
+},
+{
+    "pk": 19, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "19", 
+        "name": "Autorisation du ministre"
+    }
+},
+{
+    "pk": 20, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "20", 
+        "name": "Concours d\u2019architecture"
+    }
+},
+{
+    "pk": 21, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "21", 
+        "name": "Pr\u00e9cisez \u00e0 l'\u00e9tape Description"
+    }
+},
+{
+    "pk": 22, 
+    "model": "api.dispositionmunicipale", 
+    "fields": {
+        "code": "22", 
+        "name": "Contrat conclu avec le concepteur des plans et devis pour la modification de ceux-ci"
+    }
+},
+{
+    "pk": 1, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CAN", 
+        "name": "Canada"
+    }
+},
+{
+    "pk": 2, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "USA", 
+        "name": "\u00c9tats-Unis"
+    }
+},
+{
+    "pk": 3, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "AF", 
+        "name": "Afghanistan"
+    }
+},
+{
+    "pk": 4, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "ZA", 
+        "name": "Afrique du Sud"
+    }
+},
+{
+    "pk": 5, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "AL", 
+        "name": "Albanie"
+    }
+},
+{
+    "pk": 6, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "DZ", 
+        "name": "Alg\u00e9rie"
+    }
+},
+{
+    "pk": 7, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "DE", 
+        "name": "Allemagne"
+    }
+},
+{
+    "pk": 8, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "AD", 
+        "name": "Andorre"
+    }
+},
+{
+    "pk": 9, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "AO", 
+        "name": "Angola"
+    }
+},
+{
+    "pk": 10, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "AQ", 
+        "name": "Antarctique"
+    }
+},
+{
+    "pk": 11, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SA", 
+        "name": "Arabie Saoudite"
+    }
+},
+{
+    "pk": 12, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "AR", 
+        "name": "Argentine"
+    }
+},
+{
+    "pk": 13, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "AM", 
+        "name": "Arm\u00e9nie"
+    }
+},
+{
+    "pk": 14, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "AU", 
+        "name": "Australie"
+    }
+},
+{
+    "pk": 15, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "AT", 
+        "name": "Autriche"
+    }
+},
+{
+    "pk": 16, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "AZ", 
+        "name": "Azerbaidjan"
+    }
+},
+{
+    "pk": 17, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BS", 
+        "name": "Bahamas"
+    }
+},
+{
+    "pk": 18, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BH", 
+        "name": "Bahrain"
+    }
+},
+{
+    "pk": 19, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BD", 
+        "name": "Bangladesh"
+    }
+},
+{
+    "pk": 20, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BE", 
+        "name": "Belgique"
+    }
+},
+{
+    "pk": 21, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BJ", 
+        "name": "B\u00e9nin"
+    }
+},
+{
+    "pk": 22, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BM", 
+        "name": "Bermude"
+    }
+},
+{
+    "pk": 23, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BT", 
+        "name": "Bhoutan"
+    }
+},
+{
+    "pk": 24, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BY", 
+        "name": "Bi\u00e9lorussie"
+    }
+},
+{
+    "pk": 25, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BO", 
+        "name": "Bolivie"
+    }
+},
+{
+    "pk": 26, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BA", 
+        "name": "Bosnie Herz\u00e9govine"
+    }
+},
+{
+    "pk": 27, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BW", 
+        "name": "Botswana"
+    }
+},
+{
+    "pk": 28, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BR", 
+        "name": "Br\u00e9sil"
+    }
+},
+{
+    "pk": 29, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BN", 
+        "name": "Brunei Darussalam"
+    }
+},
+{
+    "pk": 30, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BG", 
+        "name": "Bulgarie"
+    }
+},
+{
+    "pk": 31, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BF", 
+        "name": "Burkina Faso"
+    }
+},
+{
+    "pk": 32, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "BI", 
+        "name": "Burundi"
+    }
+},
+{
+    "pk": 33, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "KH", 
+        "name": "Cambodge"
+    }
+},
+{
+    "pk": 34, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CM", 
+        "name": "Cameroun"
+    }
+},
+{
+    "pk": 35, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CV", 
+        "name": "Cap Vert"
+    }
+},
+{
+    "pk": 36, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CL", 
+        "name": "Chili"
+    }
+},
+{
+    "pk": 37, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CN", 
+        "name": "Chine"
+    }
+},
+{
+    "pk": 38, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CY", 
+        "name": "Chypre"
+    }
+},
+{
+    "pk": 39, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CO", 
+        "name": "Colombie"
+    }
+},
+{
+    "pk": 40, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "KM", 
+        "name": "Comor\u00e8s"
+    }
+},
+{
+    "pk": 41, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CG", 
+        "name": "Congo"
+    }
+},
+{
+    "pk": 42, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "KR", 
+        "name": "Cor\u00e9e (R\u00e9publique)"
+    }
+},
+{
+    "pk": 43, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "KP", 
+        "name": "Cor\u00e9e (R\u00e9publique d\u00e9mocratique)"
+    }
+},
+{
+    "pk": 44, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CR", 
+        "name": "Costa Rica"
+    }
+},
+{
+    "pk": 45, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CI", 
+        "name": "C\u00f4te d'Ivoire"
+    }
+},
+{
+    "pk": 46, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "HR", 
+        "name": "Croatie"
+    }
+},
+{
+    "pk": 47, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CU", 
+        "name": "Cuba"
+    }
+},
+{
+    "pk": 48, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "DK", 
+        "name": "Danemark"
+    }
+},
+{
+    "pk": 49, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "DJ", 
+        "name": "Djibouti"
+    }
+},
+{
+    "pk": 50, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "EG", 
+        "name": "Egypte"
+    }
+},
+{
+    "pk": 51, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "AE", 
+        "name": "Emirats Arabes Unis"
+    }
+},
+{
+    "pk": 52, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "EC", 
+        "name": "Equateur"
+    }
+},
+{
+    "pk": 53, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "ES", 
+        "name": "Espagne"
+    }
+},
+{
+    "pk": 54, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "EE", 
+        "name": "Estonie"
+    }
+},
+{
+    "pk": 55, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "ET", 
+        "name": "Ethiophie"
+    }
+},
+{
+    "pk": 56, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MK", 
+        "name": "Ex-r\u00e9publique Mac\u00e9doine de Yougoslavie"
+    }
+},
+{
+    "pk": 57, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "RU", 
+        "name": "F\u00e9d\u00e9ration de Russie"
+    }
+},
+{
+    "pk": 58, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "FI", 
+        "name": "Finlande"
+    }
+},
+{
+    "pk": 59, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "FR", 
+        "name": "France"
+    }
+},
+{
+    "pk": 60, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GA", 
+        "name": "Gabon"
+    }
+},
+{
+    "pk": 61, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GM", 
+        "name": "Gambie"
+    }
+},
+{
+    "pk": 62, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GE", 
+        "name": "G\u00e9orgie"
+    }
+},
+{
+    "pk": 63, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GH", 
+        "name": "Ghana"
+    }
+},
+{
+    "pk": 64, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GI", 
+        "name": "Gibraltar"
+    }
+},
+{
+    "pk": 65, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GR", 
+        "name": "Gr\u00e8ce"
+    }
+},
+{
+    "pk": 66, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GL", 
+        "name": "Gr\u00f6enland"
+    }
+},
+{
+    "pk": 67, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GP", 
+        "name": "Guadeloupe"
+    }
+},
+{
+    "pk": 68, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GT", 
+        "name": "Guatemala"
+    }
+},
+{
+    "pk": 69, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GN", 
+        "name": "Guin\u00e9e"
+    }
+},
+{
+    "pk": 70, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GQ", 
+        "name": "Guin\u00e9e \u00e9quatoriale"
+    }
+},
+{
+    "pk": 71, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GW", 
+        "name": "Guin\u00e9e-Bissau"
+    }
+},
+{
+    "pk": 72, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GY", 
+        "name": "Guyana"
+    }
+},
+{
+    "pk": 73, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GF", 
+        "name": "Guyana fran\u00e7aise"
+    }
+},
+{
+    "pk": 74, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "HT", 
+        "name": "Ha\u00efti"
+    }
+},
+{
+    "pk": 75, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "HN", 
+        "name": "Honduras"
+    }
+},
+{
+    "pk": 76, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "HK", 
+        "name": "Hong Kong"
+    }
+},
+{
+    "pk": 77, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "HU", 
+        "name": "Hongrie"
+    }
+},
+{
+    "pk": 78, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MU", 
+        "name": "Ile Maurice"
+    }
+},
+{
+    "pk": 79, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "FO", 
+        "name": "Iles Far\u00f6e"
+    }
+},
+{
+    "pk": 80, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "IN", 
+        "name": "Inde"
+    }
+},
+{
+    "pk": 81, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "ID", 
+        "name": "Indon\u00e9sie"
+    }
+},
+{
+    "pk": 82, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "IR", 
+        "name": "Iran (R\u00e9publique islamique)"
+    }
+},
+{
+    "pk": 83, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "IQ", 
+        "name": "Iraq"
+    }
+},
+{
+    "pk": 84, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "IE", 
+        "name": "Irlande"
+    }
+},
+{
+    "pk": 85, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "IS", 
+        "name": "Islande"
+    }
+},
+{
+    "pk": 86, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "IL", 
+        "name": "Isra\u00ebl"
+    }
+},
+{
+    "pk": 87, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "IT", 
+        "name": "Italie"
+    }
+},
+{
+    "pk": 88, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "JM", 
+        "name": "Jama\u00efque"
+    }
+},
+{
+    "pk": 89, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "JP", 
+        "name": "Japon"
+    }
+},
+{
+    "pk": 90, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "JO", 
+        "name": "Jordanie"
+    }
+},
+{
+    "pk": 91, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "KZ", 
+        "name": "Kazakhstan"
+    }
+},
+{
+    "pk": 92, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "KE", 
+        "name": "Kenya"
+    }
+},
+{
+    "pk": 93, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "KW", 
+        "name": "Kowe\u00eft"
+    }
+},
+{
+    "pk": 94, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "LA", 
+        "name": "Laos"
+    }
+},
+{
+    "pk": 95, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "LS", 
+        "name": "Lesotho"
+    }
+},
+{
+    "pk": 96, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "LV", 
+        "name": "Lettonie"
+    }
+},
+{
+    "pk": 97, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "LB", 
+        "name": "Liban"
+    }
+},
+{
+    "pk": 98, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "LR", 
+        "name": "Liberia"
+    }
+},
+{
+    "pk": 99, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "LI", 
+        "name": "Liechtenstein"
+    }
+},
+{
+    "pk": 100, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "LT", 
+        "name": "Lituanie"
+    }
+},
+{
+    "pk": 101, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "LU", 
+        "name": "Luxembourg"
+    }
+},
+{
+    "pk": 102, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MO", 
+        "name": "Macau"
+    }
+},
+{
+    "pk": 103, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MG", 
+        "name": "Madagascar"
+    }
+},
+{
+    "pk": 104, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MY", 
+        "name": "Malaisie"
+    }
+},
+{
+    "pk": 105, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MW", 
+        "name": "Malawi"
+    }
+},
+{
+    "pk": 106, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MV", 
+        "name": "Maldives"
+    }
+},
+{
+    "pk": 107, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "ML", 
+        "name": "Mali"
+    }
+},
+{
+    "pk": 108, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MT", 
+        "name": "Malte"
+    }
+},
+{
+    "pk": 109, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MA", 
+        "name": "Maroc"
+    }
+},
+{
+    "pk": 110, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MQ", 
+        "name": "Martinique"
+    }
+},
+{
+    "pk": 111, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MR", 
+        "name": "Mauritanie"
+    }
+},
+{
+    "pk": 112, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MX", 
+        "name": "Mexique"
+    }
+},
+{
+    "pk": 113, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MD", 
+        "name": "Moldavie"
+    }
+},
+{
+    "pk": 114, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MC", 
+        "name": "Monaco"
+    }
+},
+{
+    "pk": 115, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MN", 
+        "name": "Mongolie"
+    }
+},
+{
+    "pk": 116, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "MZ", 
+        "name": "Mozambique"
+    }
+},
+{
+    "pk": 117, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "NA", 
+        "name": "Namibie"
+    }
+},
+{
+    "pk": 118, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "NP", 
+        "name": "N\u00e9pal"
+    }
+},
+{
+    "pk": 119, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "NI", 
+        "name": "Nicaragua"
+    }
+},
+{
+    "pk": 120, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "NE", 
+        "name": "Niger"
+    }
+},
+{
+    "pk": 121, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "NG", 
+        "name": "Nig\u00e9ria"
+    }
+},
+{
+    "pk": 122, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "NO", 
+        "name": "Norv\u00e8ge"
+    }
+},
+{
+    "pk": 123, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "NC", 
+        "name": "Nouvelle Cal\u00e9donie"
+    }
+},
+{
+    "pk": 124, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "NZ", 
+        "name": "Nouvelle-Z\u00e9lande"
+    }
+},
+{
+    "pk": 125, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "UG", 
+        "name": "Ouganda"
+    }
+},
+{
+    "pk": 126, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "UZ", 
+        "name": "Ouzbekistan"
+    }
+},
+{
+    "pk": 127, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "PK", 
+        "name": "Pakistan"
+    }
+},
+{
+    "pk": 128, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "PA", 
+        "name": "Panama"
+    }
+},
+{
+    "pk": 129, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "PG", 
+        "name": "Papouasie-Nouvelle Guin\u00e9e"
+    }
+},
+{
+    "pk": 130, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "PY", 
+        "name": "Paraguay"
+    }
+},
+{
+    "pk": 131, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "NL", 
+        "name": "Pays-Bas"
+    }
+},
+{
+    "pk": 132, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "PE", 
+        "name": "P\u00e9rou"
+    }
+},
+{
+    "pk": 133, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "PH", 
+        "name": "Philippines"
+    }
+},
+{
+    "pk": 134, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "PL", 
+        "name": "Pologne"
+    }
+},
+{
+    "pk": 135, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "PF", 
+        "name": "Polyn\u00e9sie fran\u00e7aise"
+    }
+},
+{
+    "pk": 136, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "PT", 
+        "name": "Portugal"
+    }
+},
+{
+    "pk": 137, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "PR", 
+        "name": "Puerto Rico"
+    }
+},
+{
+    "pk": 138, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CF", 
+        "name": "R\u00e9publique centrafricaine"
+    }
+},
+{
+    "pk": 139, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "DO", 
+        "name": "R\u00e9publique Dominicaine"
+    }
+},
+{
+    "pk": 140, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CZ", 
+        "name": "R\u00e9publique Tch\u00e8que"
+    }
+},
+{
+    "pk": 141, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "RO", 
+        "name": "Roumanie"
+    }
+},
+{
+    "pk": 142, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "GB", 
+        "name": "Royaume Uni"
+    }
+},
+{
+    "pk": 143, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "RW", 
+        "name": "Rwanda"
+    }
+},
+{
+    "pk": 144, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SB", 
+        "name": "Salomon (Iles)"
+    }
+},
+{
+    "pk": 145, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SV", 
+        "name": "Salvador"
+    }
+},
+{
+    "pk": 146, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SM", 
+        "name": "San Marin"
+    }
+},
+{
+    "pk": 147, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SN", 
+        "name": "S\u00e9n\u00e9gal"
+    }
+},
+{
+    "pk": 148, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SC", 
+        "name": "Seychelles"
+    }
+},
+{
+    "pk": 149, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SL", 
+        "name": "Sierra Leone"
+    }
+},
+{
+    "pk": 150, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SG", 
+        "name": "Singapoure"
+    }
+},
+{
+    "pk": 151, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SK", 
+        "name": "Slovaquie"
+    }
+},
+{
+    "pk": 152, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SI", 
+        "name": "Slov\u00e9nie"
+    }
+},
+{
+    "pk": 153, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SO", 
+        "name": "Somalie"
+    }
+},
+{
+    "pk": 154, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SD", 
+        "name": "Soudan"
+    }
+},
+{
+    "pk": 155, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "LK", 
+        "name": "Sri Lanka"
+    }
+},
+{
+    "pk": 156, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SE", 
+        "name": "Su\u00e8de"
+    }
+},
+{
+    "pk": 157, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "CH", 
+        "name": "Suisse"
+    }
+},
+{
+    "pk": 158, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SR", 
+        "name": "Surinam"
+    }
+},
+{
+    "pk": 159, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SZ", 
+        "name": "Swaziland"
+    }
+},
+{
+    "pk": 160, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "SY", 
+        "name": "Syrie"
+    }
+},
+{
+    "pk": 161, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "TW", 
+        "name": "Ta\u00efwan"
+    }
+},
+{
+    "pk": 162, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "TZ", 
+        "name": "Tanzanie"
+    }
+},
+{
+    "pk": 163, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "TD", 
+        "name": "Tchad"
+    }
+},
+{
+    "pk": 164, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "TH", 
+        "name": "Tha\u00eflande"
+    }
+},
+{
+    "pk": 165, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "TG", 
+        "name": "Togo"
+    }
+},
+{
+    "pk": 166, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "TT", 
+        "name": "Trinit\u00e9-et-Tobago"
+    }
+},
+{
+    "pk": 167, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "TN", 
+        "name": "Tunisie"
+    }
+},
+{
+    "pk": 168, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "TR", 
+        "name": "Turquie"
+    }
+},
+{
+    "pk": 169, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "UA", 
+        "name": "Ukraine"
+    }
+},
+{
+    "pk": 170, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "UY", 
+        "name": "Uruguay"
+    }
+},
+{
+    "pk": 171, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "VA", 
+        "name": "Vatican"
+    }
+},
+{
+    "pk": 172, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "VE", 
+        "name": "Venezuela"
+    }
+},
+{
+    "pk": 173, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "VN", 
+        "name": "Vietnam"
+    }
+},
+{
+    "pk": 174, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "YE", 
+        "name": "Y\u00e9men"
+    }
+},
+{
+    "pk": 175, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "YU", 
+        "name": "Yougoslavie"
+    }
+},
+{
+    "pk": 176, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "ZR", 
+        "name": "Za\u00efre"
+    }
+},
+{
+    "pk": 177, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "ZM", 
+        "name": "Zambie"
+    }
+},
+{
+    "pk": 178, 
+    "model": "api.pays", 
+    "fields": {
+        "code": "ZW", 
+        "name": "Zimbabwe"
+    }
+},
+{
+    "pk": 1, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "01", 
+        "name": "$"
+    }
+},
+{
+    "pk": 2, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "02", 
+        "name": "$"
+    }
+},
+{
+    "pk": 3, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "03", 
+        "name": "$/KM"
+    }
+},
+{
+    "pk": 4, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "04", 
+        "name": "$/L"
+    }
+},
+{
+    "pk": 5, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "05", 
+        "name": "$EA"
+    }
+},
+{
+    "pk": 6, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "06", 
+        "name": "$L"
+    }
+},
+{
+    "pk": 7, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "07", 
+        "name": "$U.S."
+    }
+},
+{
+    "pk": 8, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "08", 
+        "name": "%"
+    }
+},
+{
+    "pk": 9, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "09", 
+        "name": "$/TM"
+    }
+},
+{
+    "pk": 10, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "10", 
+        "name": "$/h"
+    }
+},
+{
+    "pk": 11, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "11", 
+        "name": "points"
+    }
+},
+{
+    "pk": 12, 
+    "model": "api.unitemontant", 
+    "fields": {
+        "code": "12", 
+        "name": "$/m3"
+    }
+}
+]
