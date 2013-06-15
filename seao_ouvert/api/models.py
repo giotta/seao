@@ -34,7 +34,12 @@ class Region(ChoiceValue):
         verbose_name_plural = u"Régions"
 
 
-class Disposition(ChoiceValue):
+class DispositionNonMunicipale(ChoiceValue):
+    def __unicode__(self):
+        return "%s" % (self.name,)
+
+
+class DispositionMunicipale(ChoiceValue):
     def __unicode__(self):
         return "%s" % (self.name,)
 
@@ -136,10 +141,17 @@ class Avis(models.Model):
         related_name='avis',
         blank=True,
         )
-    disposition = models.ForeignKey(
-        Disposition,
+    disposition_non_municipale = models.ForeignKey(
+        DispositionNonMunicipale,
         related_name='avis',
         blank=True,
+        null=True,
+        )
+    disposition_municipale = models.ForeignKey(
+        DispositionMunicipale,
+        related_name='avis',
+        blank=True,
+        null=True,
         )
     precision = models.CharField(
         max_length=150,
