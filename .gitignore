@@ -1,31 +1,12 @@
-# binaires
-*.pyc
-*.pyo
-
-# Fichier temporaires:
-.*.swp
 *~
-\#*#
-# src/*
-
-# DB de dev
-*.db
-
-# restants de merge
-*.orig
-*.rej
-
-# Configuration du projet - par environnement
-conf.py
-django.wsgi
-local.cfg
-
-# buildout
-.installed.cfg
-bin
-develop-eggs
-downloads
-eggs
-log
-parts
-tmp
+_build
+*.pyc
+.*.s?p
+.*-makeplaceholder
+.DS_Store
+.env
+tags
+db.sqlite3
+local_settings.py
+env
+dev.db
