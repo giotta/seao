@@ -9,20 +9,24 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular-resource.min.js"></script>
     <script type="text/javascript" src="restangular-0.8.3/dependencies/lodash.js"></script>
     <script type="text/javascript" src="restangular-0.8.3/restangular.js"></script>
+    <script type="text/javascript" src="ngGrid-2.0.6/ng-grid.js"></script>
     <script src="ui-bootstrap-tpls-0.3.0.min.js"></script>
     <script src="assets/select2.js"></script>
     <script src="assets/ui-select2.js"></script>
     <script src="assets/app.js"></script>
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="app.css" rel="stylesheet"/>
+    <link href="ngGrid-2.0.6/ng-grid.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/select2.css"/>
   </head>
-  <body class="ng-cloak" ng-controller="MainCtrl">
+  <!-- <body class="ng-cloak" ng-controller="MainCtrl"> -->
+  <body ng-controller="MainCtrl">
     <div role="main">
       <div class="row">
 	<h1 class="span12">SEAO - Accès aux données ouvertes</h1>
       </div>
-      <div class="row" ng-repeat="av in avis">
-	<div class="span12">{{ av }}</div>
+      <div class="row">
+	<div class="span12 gridStyle" ng-grid="gridOptions"></div>
       </div>
     </div>
   </body>
