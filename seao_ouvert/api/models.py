@@ -1,11 +1,33 @@
 # coding: utf-8
 
 from django.db import models
+from django.template.defaultfilters import slugify
 
 
 class ChoiceValue(models.Model):
     code = models.CharField(max_length=3)
     name = models.CharField(max_length=255)
+    class Meta:
+        abstract = True
+
+
+class SluggedModel(models.Model):
+    slug = models.SlugField(
+        max_length=255,
+        blank=True,
+        null=True,
+        )
+
+    slug_field = 'title'
+
+    def save(self, *args, **kwargs):
+        # For automatic slug generation.
+        if not self.slug:
+            self.slug = slugify(
+                getattr(self, self.slug_field)
+                )
+        return super(SluggedModel, self).save(*args, **kwargs)
+
     class Meta:
         abstract = True
 
@@ -67,7 +89,7 @@ class UNSPSC(ChoiceValue):
         verbose_name_plural = u"UNSPSC"
 
 
-class Avis(models.Model):
+class Avis(SluggedModel):
     titre = models.CharField(
         max_length=150,
         )
@@ -152,7 +174,8 @@ class Avis(models.Model):
         verbose_name = u"Avis"
         verbose_name_plural = u"Avis"
 
-class Soumission(models.Model):
+
+class Soumission(SluggedModel):
     nom_organisation = models.CharField(
         max_length=80,
         )
