@@ -89,60 +89,74 @@ class Avis(models.Model):
     orgamisme = models.CharField(
         max_length=150,
         blank=True,
+        null=True,
         )
     municipal = models.BooleanField()
     adresse1 = models.CharField(
         max_length=60,
         blank=True,
+        null=True,
         )
     adresse2 = models.CharField(
         max_length=60,
         blank=True,
+        null=True,
         )
     ville = models.CharField(
         max_length=40,
         blank=True,
+        null=True,
         )
     province = models.ForeignKey(
         Province,
         related_name='avis',
         blank=True,
+        null=True,
         )
     pays = models.ForeignKey(
         Pays,
         related_name='avis',
         blank=True,
+        null=True,
         )
     code_postal = models.CharField(
         max_length=7,
         blank=True,
+        null=True,
         )
     type = models.ForeignKey(
         Type,
         related_name='avis',
         blank=True,
+        null=True,
         )
     nature = models.ForeignKey(
         Nature,
         related_name='avis',
         blank=True,
+        null=True,
         )
     date_publication = models.DateTimeField(
         blank=True,
+        null=True,
         )
     date_fermeture = models.DateTimeField(
         blank=True,
+        null=True,
         )
     date_saisie_adjudication = models.DateTimeField(
         blank=True,
+        null=True,
         )
     date_adjudication = models.DateField(
         blank=True,
+        null=True,
         )
     regions_livraison = models.ManyToManyField(
         Region,
         related_name='avis',
         blank=True,
+        null=True,
         )
     disposition_non_municipale = models.ForeignKey(
         DispositionNonMunicipale,
@@ -159,6 +173,7 @@ class Avis(models.Model):
     precision = models.CharField(
         max_length=150,
         blank=True,
+        null=True,
         )
 
     def __unicode__(self):
@@ -177,28 +192,34 @@ class Soumission(models.Model):
     adresse1 = models.CharField(
         max_length=60,
         blank=True,
+        null=True,
         )
     adresse2 = models.CharField(
         max_length=60,
         blank=True,
+        null=True,
         )
     ville = models.CharField(
         max_length=40,
         blank=True,
+        null=True,
         )
     province = models.ForeignKey(
         Province,
         related_name='soumissions',
         blank=True,
+        null=True,
         )
     pays = models.ForeignKey(
         Pays,
         related_name='soumissions',
         blank=True,
+        null=True,
         )
     code_postal = models.CharField(
         max_length=7,
         blank=True,
+        null=True,
         )
     admissible = models.NullBooleanField()
     conforme = models.NullBooleanField()
@@ -207,16 +228,19 @@ class Soumission(models.Model):
         decimal_places=2,
         max_digits=12,
         blank=True,
+        null=True,
         )
     montant_soumis_unite = models.ForeignKey(
         UniteMontant,
         blank=True,
+        null=True,
         related_name='soumissions',
         )
     montant_contrat = models.DecimalField(
         decimal_places=2,
         max_digits=12,
         blank=True,
+        null=True,
         )
 
     appel = models.ForeignKey(
