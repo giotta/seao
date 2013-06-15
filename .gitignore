@@ -11,3 +11,5 @@ local_settings.py
 env
 dev.db
 data/
+*#
+*.#*
