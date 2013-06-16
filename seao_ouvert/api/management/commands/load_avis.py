@@ -36,8 +36,11 @@ class Command(BaseCommand):
 
         nouveau = Avis()
         nouveau.numero_seao = avis['numeroseao']
+
         if not avis['numero']:
+            #Il devrait toujours y avoir un numero pour un avis.
             return
+
         nouveau.numero = avis['numero']
         nouveau.organisme = avis['organisme']
         nouveau.municipal = avis['municipal']
@@ -129,7 +132,9 @@ class Command(BaseCommand):
 
         nouvelle = Soumission()
         if not fournisseur['nomorganisation']:
+            #Il devrait toujours y avoir un nom pour les fournisseur
             return
+        
         nouvelle.nom_organisation = fournisseur['nomorganisation']
         nouvelle.adresse1 = fournisseur['adresse1']
         nouvelle.adresse2 = fournisseur['adresse2']
@@ -139,7 +144,7 @@ class Command(BaseCommand):
         if code_p and not Province.objects.filter(code=code_p).exists():
             nouvelle_province= Province()
             nouvelle_province.code = code_p
-            nouvelle_province.name = "montant{0}".format(code_p)
+            nouvelle_province.name = "province{0}".format(code_p)
             nouvelle_province.save()
         if code_p:
             nouvelle.province = Province.objects.get(code=code_p)
@@ -148,7 +153,7 @@ class Command(BaseCommand):
         if code_p and not Pays.objects.filter(code=code_p).exists():
             nouveau_pays = Pays()
             nouveau_pays.code = code_p
-            nouveau_pays.name = "montant{0}".format(code_p)
+            nouveau_pays.name = "pays{0}".format(code_p)
             nouveau_pays.save()
         if code_p:
             nouvelle.pays = Pays.objects.get(code=code_p)
@@ -159,19 +164,19 @@ class Command(BaseCommand):
         nouvelle.adjudicataire = fournisseur['adjudicataire']
         nouvelle.montant_soumis = fournisseur['montantsoumis']
         
-        #Pas encore de fixtures pour les montant soumis
         unite = fournisseur['montantssoumisunite']
-
         if not UniteMontant.objects.filter(code=unite).exists():
             nouveau_montant = UniteMontant()
             nouveau_montant.code = unite
             nouveau_montant.name = "montant{0}".format(unite)
             nouveau_montant.save()
-            
         nouvelle.montant_soumis_unite = UniteMontant.objects.\
                                         get(code=unite)
 
         nouvelle.montant_contrat = fournisseur['montantcontrat']
+
+        # Le fournisseur devrait toujours etre cree apres l'avis
+        assert(Avis.objects.filter(numero_seao=seao).exists())
 
         nouvelle.appel = Avis.objects.get(numero_seao=seao)
         nouvelle.save()
