@@ -79,17 +79,19 @@ class Command(BaseCommand):
         nouveau.nature = Nature.objects.get(code=avis['nature'])
 
         date_publication = datetime.datetime.strptime(avis['datepublication'], "%Y-%m-%d %H:%M")
-        date_publication.replace(tzinfo=timezone.get_current_timezone())
+        date_publication = date_publication.replace(tzinfo=timezone.get_current_timezone())
         nouveau.date_publication = date_publication
 
         date_fermeture = datetime.datetime.strptime(avis['datefermeture'], "%Y-%m-%d %H:%M")
-        date_fermeture.replace(tzinfo=timezone.get_current_timezone())
+        date_fermeture = date_fermeture.replace(tzinfo=timezone.get_current_timezone())
         nouveau.date_fermeture = date_fermeture
 
         date_saisie_adjudication = datetime.datetime.strptime(avis['datesaisieadjudication'], "%Y-%m-%d %H:%M")
-        date_saisie_adjudication.replace(tzinfo=timezone.get_current_timezone())
+        date_saisie_adjudication = date_saisie_adjudication.replace(tzinfo=timezone.get_current_timezone())
         nouveau.date_saisie_adjudication = date_saisie_adjudication
 
+        date_adjudication = datetime.datetime.strptime(avis['dateadjudication'], "%Y-%m-%d")
+        date_adjudication = date_adjudication.replace(tzinfo=timezone.get_current_timezone())
         nouveau.date_adjudication = avis['dateadjudication']
 
         #What's up avec le m2m et regions??
