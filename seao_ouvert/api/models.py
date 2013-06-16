@@ -92,6 +92,7 @@ class Avis(models.Model):
         null=True,
         )
     municipal = models.BooleanField()
+
     adresse1 = models.CharField(
         max_length=60,
         blank=True,
@@ -107,6 +108,7 @@ class Avis(models.Model):
         blank=True,
         null=True,
         )
+
     province = models.ForeignKey(
         Province,
         related_name='avis',
