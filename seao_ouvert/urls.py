@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
-from .api.resources import AvisResource
 from django.contrib import admin
+
+from .api.resources import AvisResource
 
 
 admin.autodiscover()

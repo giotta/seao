@@ -5,7 +5,7 @@ Exploration des données ouvertes sur les appels d'offres (seao) du Québec
 ## Licence
 
 La licence de ce logiciel est accessible dans le fichier :
-LICENSE
+LICENSE.md
 
 ## Données
 
@@ -19,6 +19,13 @@ Ces données reformattées sont mise à disposition pour la communauté à l'URL
 http://seao.pourvotre.info/avis.json
 
 Ce logiciel utilise directement ces données reformattées.
+
+Aussi, les données sont reliées à des listes de valeurs décrites dans les
+spécifications :
+http://donnees.gouv.qc.ca/geonetwork/srv/en/resources.get?id=999&fname=SEAO_-_Spcifications_XML_donnes_ouvertes_-_20130418.pdf&access=private
+
+Ce logiciel inclut ces listes de valeurs comme données initiales de références (fixes).
+seao_ouvert/api/fixtures/donnees_champs.json
 
 ### Licence
 http://www.donnees.gouv.qc.ca/?node=/licence
@@ -51,6 +58,7 @@ pip install -r requirements.txt
 
 # création de la base de données locale
 python manage.py syncdb --migrate
+# créez vous un user admin quand on vous le demande
 
 # charger des données initiales
 python manage.py loaddata seao_ouvert/api/fixtures/donnees_champs.json
