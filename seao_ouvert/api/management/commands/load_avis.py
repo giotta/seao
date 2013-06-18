@@ -46,40 +46,27 @@ class Command(BaseCommand):
         nouveau.municipal = avis['municipal']
         nouveau.adresse1 = avis['adresse1']
         nouveau.adresse2 = avis['adresse2']
-        
-        code_p = avis['province']
-        if code_p and not Province.objects.filter(code=code_p):
-            nouvelle_province = Province()
-            nouvelle_province.code = code_p
-            nouvelle_province.name = "province{0}".format(code_p)
-            nouvelle_province.save()
-        if code_p:
-            nouveau.province = Province.objects.get(code=code_p)
-
-        code_p = avis['pays']
-        if not Pays.objects.filter(code=code_p):
-            nouveau_pays= Pays()
-            nouveau_pays.code = code_p
-            nouveau_pays.name = "pays{0}".format(code_p)
-            nouveau_pays.save()
-        if code_p:
-            nouveau.pays = Pays.objects.get(code=code_p)
-
         nouveau.code_postal = avis['codepostal']
         
-        if not Type.objects.filter(code=avis['type']):
-            nouveau_type= Type()
-            nouveau_type.code = avis['type']
-            nouveau_type.name = "type{0}".format(avis['type'])
-            nouveau_type.save()
-        nouveau.type = Type.objects.get(code=avis['type'])
+        code_p = avis['province']
+        if code_p:
+            nouveau.province, created = Province.objects.get_or_create\
+                                   (code=code_p ,defaults={'name': 'default'})
 
-        if not Nature.objects.filter(code=avis['nature']):
-            nouvelle_nature= Nature()
-            nouvelle_nature.code = avis['nature']
-            nouvelle_nature.name = "nature{0}".format(avis['nature'])
-            nouvelle_nature.save()
-        nouveau.nature = Nature.objects.get(code=avis['nature'])
+        code_p = avis['pays']
+        if code_p:
+            nouveau.pays, created = Pays.objects.get_or_create\
+                                   (code=code_p ,defaults={'name': 'default'})
+        
+        code_t = avis['type']
+        if code_t:
+            nouveau.type, created = Type.objects.get_or_create\
+                                   (code=code_t ,defaults={'name': 'default'})
+
+        code_n = avis['nature']
+        if code_n:
+            nouveau.nature, created = Nature.objects.get_or_create\
+                                   (code=code_n ,defaults={'name': 'default'})
 
         date_publication = datetime.datetime.strptime(avis['datepublication'], "%Y-%m-%d %H:%M")
         date_publication = date_publication.replace(tzinfo=timezone.get_current_timezone())
@@ -99,32 +86,23 @@ class Command(BaseCommand):
 
         #What's up avec le m2m et regions??
         
-        if nouveau.municipal and avis['disposition']:
+        code_d = avis['disposition']
+        if nouveau.municipal and code_d:
 
-            if not DispositionMunicipale.objects.filter(code=avis['disposition']):
-                nouvelle_dispo= DispositionMunicipale()
-                nouvelle_dispo.code = avis['disposition']
-                nouvelle_dispo.name = "disposition{0}".format(avis['disposition'])
-                nouvelle_dispo.save()
-            nouveau.disposition_municipale = DispositionMunicipale.objects.\
-                                             get(code=avis['disposition'])
-        elif avis['disposition']:
+            nouveau.disposition_municipale, created = DispositionMunicipale.objects.get_or_create\
+                                                (code=code_d ,defaults={'name': 'default'})
+        elif code_d:
 
-            if not DispositionNonMunicipale.objects.filter(code=avis['disposition']):
-                nouvelle_dispo= DispositionNonMunicipale()
-                nouvelle_dispo.code = avis['disposition']
-                nouvelle_dispo.name = "disposition{0}".format(avis['disposition'])
-                nouvelle_dispo.save()
-            nouveau.disposition_non_municipale = DispositionNonMunicipale.objects.\
-                                                   get(code=avis['disposition'])
+            nouveau.disposition_non_municipale, created = DispositionNonMunicipale.objects.get_or_create\
+                                                (code=code_d ,defaults={'name': 'default'})
 
         #Saving new avis before associating fournisseur to it.
         nouveau.save()
 
         for nom, fournisseur in avis['fournisseurs'].items():
-            self.loader_fournisseur(nouveau.numero_seao, fournisseur)
+            self.loader_fournisseur(nouveau, fournisseur)
            
-    def loader_fournisseur(self, seao, fournisseur):
+    def loader_fournisseur(self, avis, fournisseur):
 
         # Pour Gerer l'inconsistence dans les datas
         if isinstance(fournisseur, list):
@@ -139,44 +117,27 @@ class Command(BaseCommand):
         nouvelle.adresse1 = fournisseur['adresse1']
         nouvelle.adresse2 = fournisseur['adresse2']
         nouvelle.ville = fournisseur['ville']
-        
-        code_p = fournisseur['province']
-        if code_p and not Province.objects.filter(code=code_p).exists():
-            nouvelle_province= Province()
-            nouvelle_province.code = code_p
-            nouvelle_province.name = "province{0}".format(code_p)
-            nouvelle_province.save()
-        if code_p:
-            nouvelle.province = Province.objects.get(code=code_p)
-
-        code_p = fournisseur['pays']
-        if code_p and not Pays.objects.filter(code=code_p).exists():
-            nouveau_pays = Pays()
-            nouveau_pays.code = code_p
-            nouveau_pays.name = "pays{0}".format(code_p)
-            nouveau_pays.save()
-        if code_p:
-            nouvelle.pays = Pays.objects.get(code=code_p)
-
         nouvelle.code_postal = fournisseur['codepostal']
         nouvelle.admissible = fournisseur['admissible']
         nouvelle.conforme = fournisseur['conforme']
         nouvelle.adjudicataire = fournisseur['adjudicataire']
         nouvelle.montant_soumis = fournisseur['montantsoumis']
-        
-        unite = fournisseur['montantssoumisunite']
-        if not UniteMontant.objects.filter(code=unite).exists():
-            nouveau_montant = UniteMontant()
-            nouveau_montant.code = unite
-            nouveau_montant.name = "montant{0}".format(unite)
-            nouveau_montant.save()
-        nouvelle.montant_soumis_unite = UniteMontant.objects.\
-                                        get(code=unite)
-
         nouvelle.montant_contrat = fournisseur['montantcontrat']
+        
+        code_p = fournisseur['province']
+        if code_p:
+            nouvelle.province, created = Province.objects.get_or_create\
+                                (code=code_p ,defaults={'name': 'default'})
 
-        # Le fournisseur devrait toujours etre cree apres l'avis
-        assert(Avis.objects.filter(numero_seao=seao).exists())
+        code_p = fournisseur['pays']
+        if code_p:
+            nouvelle.pays, created = Pays.objects.get_or_create\
+                                (code=code_p ,defaults={'name': 'default'})
 
-        nouvelle.appel = Avis.objects.get(numero_seao=seao)
+        unite = fournisseur['montantssoumisunite']
+        if not unite:
+            nouvelle.montant_soumis_unite, created = UniteMontant.objects.get_or_create\
+                                (code=unite ,defaults={'name': 'default'})
+
+        nouvelle.appel = avis
         nouvelle.save()
