@@ -17,6 +17,12 @@ class Command(BaseCommand):
         default=None,
         help='Load les avis depuis un fichier source .json'),
 
+        make_option('-x', '--xml',
+        action='store_true',
+        dest='xml',
+        default=True,
+        help='Load les avis depuis un fichier xml dorigine'),
+
         )
 
     help = BaseCommand.help + "Load les donnees des avis a partir dun fichier json"
