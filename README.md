@@ -18,13 +18,13 @@ http://www.donnees.gouv.qc.ca/?node=/donnees-details&id=542483bf-3ea2-4074-b33c-
 Ces données reformattées sont mise à disposition pour la communauté à l'URL :
 http://seao.pourvotre.info/avis.json
 
-Ce logiciel utilise directement ces données reformattées.
+SEAO Ouvert utilise directement ces données reformattées.
 
 Aussi, les données sont reliées à des listes de valeurs décrites dans les
 spécifications :
 http://donnees.gouv.qc.ca/geonetwork/srv/en/resources.get?id=999&fname=SEAO_-_Spcifications_XML_donnes_ouvertes_-_20130418.pdf&access=private
 
-Ce logiciel inclut ces listes de valeurs comme données initiales de références (fixes).
+SEAO Ouvert inclut ces listes de valeurs comme données initiales de références (fixes).
 seao_ouvert/api/fixtures/donnees_champs.json
 
 ### Licence

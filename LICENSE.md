@@ -2,7 +2,7 @@
 
 ## Données
 
-Ce logiciel utilise des données ouvertes mise à disposition par le 
+SEAO Ouvert utilise des données ouvertes mise à disposition par le 
 Gouvernement du Québec.
 
 Mention à publier conformément à la licence :
