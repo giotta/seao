@@ -1,15 +1,15 @@
-# seao
+# SEAO Ouvert
 
 Exploration des données ouvertes sur les appels d'offres (seao) du Québec
 
 ## Licence
 
-La licence de ce logiciel est accessible dans le fichier :
+La licence de SEAO Ouvert est accessible dans le fichier :
 LICENSE.md
 
 ## Données
 
-Ce logiciel utilise des données ouvertes mise à disposition par le 
+SEAO Ouvert utilise des données ouvertes mise à disposition par le 
 Gouvernement du Québec.
 
 ### Source
@@ -28,18 +28,16 @@ Ce logiciel inclut ces listes de valeurs comme données initiales de référence
 seao_ouvert/api/fixtures/donnees_champs.json
 
 ### Licence
-http://www.donnees.gouv.qc.ca/?node=/licence
-
-Mention à publier conformément à la licence :
-Comprend des données ouvertes octroyées sous la licence d'utilisation des données ouvertes de l’Administration gouvernementale disponible à l'adresse Web : www.données.gouv.qc.ca . L'octroi de la licence n'implique aucune approbation par l'Administration gouvernementale de l'utilisation des données ouvertes qui en est faite.
+Les informations de licence relatives aux données de SEAO Ouvert se trouvent dans ce fichier :
+LICENSE.md
 
 ## Installation
-Ce logiciel est codé en Python avec l'aide du framework de développement
+SEAO Ouvert est codé en Python avec l'aide du framework de développement
 web Django. Les autres dépendances logicielles sont déclarées dans
 requirements.txt
 
 ### Debian/Ubuntu
-Pour installer ce logiciel sur distribution Linux basée sur Debian:
+Pour installer SEAO Ouvert sur distribution Linux basée sur Debian:
 
 <pre>
 # cloner le dépôt git
