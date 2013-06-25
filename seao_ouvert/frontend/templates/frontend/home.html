@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>SEAO Ouvert</h1>
+
+<p>
+Exploration des données ouvertes sur les appels d'offres (seao) du Québec.
+</p>
+
+<ul>
+  <li><a href="{% url 'avis' %}">{{ nb }} avis</a></li>
+</ul>
+
+{% endblock %}

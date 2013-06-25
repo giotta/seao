@@ -12,4 +12,5 @@ urlpatterns = patterns(
     '',
     url(r'^api/v1/', include(avis_resource.urls)),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^', include('seao_ouvert.frontend.urls')),
 )
