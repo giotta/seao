@@ -32,7 +32,8 @@ class Command(BaseCommand):
         data = fichier.getroot()
         data_len = len(data)
         for line_number, avis in enumerate(data):
-            print line_number/float(data_len)*100
+            self.stdout.flush()
+            self.stdout.write("{0} %".format(line_number/float(data_len)*100))
             self.loader_avis(avis, line_number)
 
     def loader_avis(self, avis, line_number):
@@ -117,6 +118,7 @@ class Command(BaseCommand):
 
         if not nomorganisation:
             self.stderr.write("aucun nom pour un fournisseur:")
+            return
         else:
             nouvelle.nom_organisation = nomorganisation
         

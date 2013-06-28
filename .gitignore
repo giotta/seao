@@ -13,3 +13,5 @@ dev.db
 data/
 *#
 *.#*
+local.py
+
