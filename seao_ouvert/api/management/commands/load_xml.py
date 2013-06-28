@@ -46,7 +46,7 @@ class Command(BaseCommand):
             return
     
         nouveau.organisme = avis.find( 'organisme' ).text
-        nouveau.municipal = avis.find( 'municipal' ).text
+        nouveau.municipal = int(avis.find( 'municipal' ).text)
         nouveau.adresse1 = avis.find( 'adresse1' ).text
         if nouveau.adresse1:
             nouveau.adresse1.encode("ascii","ignore")
