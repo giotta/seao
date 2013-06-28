@@ -78,7 +78,7 @@ class UNSPSC(ChoiceValue):
 
 class Avis(models.Model):
     titre = models.CharField(
-        max_length=150,
+        max_length=255,
         )
     numero_seao = models.IntegerField(
         primary_key=True,
@@ -87,24 +87,24 @@ class Avis(models.Model):
         max_length=25,
         )
     organisme = models.CharField(
-        max_length=150,
+        max_length=255,
         blank=True,
         null=True,
         )
     municipal = models.BooleanField()
 
     adresse1 = models.CharField(
-        max_length=60,
+        max_length=255,
         blank=True,
         null=True,
         )
     adresse2 = models.CharField(
-        max_length=60,
+        max_length=255,
         blank=True,
         null=True,
         )
     ville = models.CharField(
-        max_length=40,
+        max_length=255,
         blank=True,
         null=True,
         )
@@ -173,7 +173,7 @@ class Avis(models.Model):
         null=True,
         )
     precision = models.CharField(
-        max_length=150,
+        max_length=255,
         blank=True,
         null=True,
         )
@@ -189,20 +189,20 @@ class Avis(models.Model):
 class Soumission(models.Model):
 
     nom_organisation = models.CharField(
-        max_length=80,
+        max_length=255,
         )
     adresse1 = models.CharField(
-        max_length=60,
+        max_length=255,
         blank=True,
         null=True,
         )
     adresse2 = models.CharField(
-        max_length=60,
+        max_length=255,
         blank=True,
         null=True,
         )
     ville = models.CharField(
-        max_length=40,
+        max_length=255,
         blank=True,
         null=True,
         )
