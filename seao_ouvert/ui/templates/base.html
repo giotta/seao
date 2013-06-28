@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="seao" id="top">
+  <head>
+    <meta charset="utf-8">
+    <title>SEAO - Accès aux données ouvertes</title>
+    <meta name="description" content="SEAO - Accès aux données ouvertes">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular-resource.min.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}restangular-0.8.3/dependencies/lodash.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}restangular-0.8.3/restangular.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}ngGrid-2.0.6/ng-grid.js"></script>
+    <script src="{{STATIC_URL}}ui-bootstrap-tpls-0.3.0.min.js"></script>
+    <script src="{{STATIC_URL}}assets/select2.js"></script>
+    <script src="{{STATIC_URL}}assets/ui-select2.js"></script>
+    <script src="{{STATIC_URL}}assets/app.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="{{STATIC_URL}}app.css" rel="stylesheet"/>
+    <link href="{{STATIC_URL}}ngGrid-2.0.6/ng-grid.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{STATIC_URL}}assets/select2.css"/>
+  </head>
+  {% block body %}{% endblock %}
+</html>
