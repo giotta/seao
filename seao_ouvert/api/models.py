@@ -86,7 +86,7 @@ class Avis(models.Model):
     numero = models.CharField(
         max_length=25,
         )
-    orgamisme = models.CharField(
+    organisme = models.CharField(
         max_length=150,
         blank=True,
         null=True,

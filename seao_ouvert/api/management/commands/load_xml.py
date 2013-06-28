@@ -6,6 +6,7 @@ import pdb
 from xml.etree import ElementTree
 from django.utils import timezone
 
+
 class Command(BaseCommand):
 
     option_list = BaseCommand.option_list +  (
@@ -28,7 +29,10 @@ class Command(BaseCommand):
         else:
             fichier = ElementTree.parse(options['fichier'])
         
-        for line_number, avis in enumerate(fichier.getroot()):
+        data = fichier.getroot()
+        data_len = len(data)
+        for line_number, avis in enumerate(data):
+            print line_number/float(data_len)*100
             self.loader_avis(avis, line_number)
 
     def loader_avis(self, avis, line_number):
@@ -41,7 +45,7 @@ class Command(BaseCommand):
             self.stderr.write("Aucun numero d'avis : ligne {0}".append(line_number))
             return
     
-        nouveau.orgamisme = avis.find( 'organisme' ).text
+        nouveau.organisme = avis.find( 'organisme' ).text
         nouveau.municipal = avis.find( 'municipal' ).text
         nouveau.adresse1 = avis.find( 'adresse1' ).text
         if nouveau.adresse1:
