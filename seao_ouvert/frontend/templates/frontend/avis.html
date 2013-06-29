@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>100 avis sur {{ nb }}</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numéro SEAO</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for a in avis %}
+    <tr>
+      <td>{{ a.numero_seao }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
