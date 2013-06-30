@@ -2,3 +2,4 @@ Django
 South
 django-tastypie
 simplejson
+beautifulsoup4
