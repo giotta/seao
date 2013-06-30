@@ -4,6 +4,7 @@ from zipfile import ZipFile
 from seao_ouvert.api.models import *
 from optparse import make_option
 import datetime, urllib2
+from xml.etree import ElementTree
 from bs4 import BeautifulSoup
 import pdb
 from django.utils import timezone
@@ -33,13 +34,153 @@ class Command(BaseCommand):
         if urls:
             self.download_files(urls)
             print "--------------------------------"
-        self.extract_files(urls)
+        files_extracted = self.extract_files(urls)
         print "--------------------------------"
-        print "Call load_xml to rock"
+        self.load_files(files_extracted)
+
+
         print "================================"
-        print "END of local import of data from source"
+        print "END of local import from data source"
 
+    def load_files(self, files):
+        
+        print "Loading downloaded files into database"
 
+        if not files:
+            print "** No files to load into database"
+            return
+            
+        for file in files:
+            self.load_file(file)
+        
+        print "{0} files loaded into database".format(len(files))
+
+    def load_file(self, file):
+        
+        print "Loading \"{0}\" into database".format(file)
+    
+        fichier = ElementTree.parse(self.LOCAL_PATH + file)
+
+        data = fichier.getroot()
+        for line_number, avis in enumerate(data):
+            self.loader_avis(avis, line_number)
+        
+        print "\"{0}\" loaded successfully".format(file)
+
+    def loader_avis(self, avis, line_number):
+
+        nouveau = Avis()
+        nouveau.numero_seao = avis.find( 'numeroseao' ).text
+        nouveau.numero = avis.find( 'numero' ).text
+
+        if not nouveau.numero:
+            self.stderr.write("Aucun numero d'avis : ligne {0}".append(line_number))
+            return
+    
+        nouveau.organisme = avis.find( 'organisme' ).text
+        nouveau.municipal = int(avis.find( 'municipal' ).text)
+        nouveau.ville = avis.find( 'ville' ).text
+        nouveau.adresse1 = avis.find( 'adresse1' ).text
+        if nouveau.adresse1:
+            nouveau.adresse1.encode("ascii","ignore")
+        nouveau.adresse2 = avis.find( 'adresse2' ).text
+        if nouveau.adresse2:
+            nouveau.adresse2.encode("ascii","ignore")
+        nouveau.code_postal = avis.find( 'codepostal' ).text
+        
+        code_p = avis.find( 'province' ).text
+        if code_p:
+            nouveau.province, created = Province.objects.get_or_create\
+                                   (code=code_p ,defaults={'name': 'default'})
+
+        code_p = avis.find( 'pays' ).text
+        if code_p:
+            nouveau.pays, created = Pays.objects.get_or_create\
+                                   (code=code_p ,defaults={'name': 'default'})
+        
+        code_t = avis.find( 'type' ).text
+        if code_t:
+            nouveau.type, created = Type.objects.get_or_create\
+                                   (code=code_t ,defaults={'name': 'default'})
+
+        code_n = avis.find( 'nature' ).text
+        if code_n:
+            nouveau.nature, created = Nature.objects.get_or_create\
+                                   (code=code_n ,defaults={'name': 'default'})
+
+        date_publication = datetime.datetime.strptime(avis.find( 'datepublication' ).text, "%Y-%m-%d %H:%M")
+        date_publication = date_publication.replace(tzinfo=timezone.get_current_timezone())
+        nouveau.date_publication = date_publication
+
+        date_fermeture = datetime.datetime.strptime(avis.find( 'datefermeture' ).text, "%Y-%m-%d %H:%M")
+        date_fermeture = date_fermeture.replace(tzinfo=timezone.get_current_timezone())
+        nouveau.date_fermeture = date_fermeture
+
+        date_saisie_adjudication = datetime.datetime.strptime(avis.find( 'datesaisieadjudication' ).text, "%Y-%m-%d %H:%M")
+        date_saisie_adjudication = date_saisie_adjudication.replace(tzinfo=timezone.get_current_timezone())
+        nouveau.date_saisie_adjudication = date_saisie_adjudication
+
+        date_adjudication = datetime.datetime.strptime(avis.find( 'dateadjudication' ).text, "%Y-%m-%d")
+        date_adjudication = date_adjudication.replace(tzinfo=timezone.get_current_timezone())
+        nouveau.date_adjudication = date_adjudication 
+
+        #What's up avec le m2m et regions??
+        
+        code_d = avis.find( 'disposition' ).text
+        if nouveau.municipal and code_d:
+
+            nouveau.disposition_municipale, created = DispositionMunicipale.objects.get_or_create\
+                                                (code=code_d ,defaults={'name': 'default'})
+        elif code_d:
+
+            nouveau.disposition_non_municipale, created = DispositionNonMunicipale.objects.get_or_create\
+                                                (code=code_d ,defaults={'name': 'default'})
+
+        #Sauvegarder l'avis avait de lui attribuer des fournisseurs
+        nouveau.save()
+
+        for fournisseur in avis.find( 'fournisseurs' ):
+            self.loader_fournisseur(nouveau, fournisseur)
+           
+    def loader_fournisseur(self, avis, fournisseur):
+
+        nouvelle = Soumission()
+
+        nomorganisation = fournisseur.find( 'nomorganisation' ).text
+
+        if not nomorganisation:
+            self.stderr.write("aucun nom pour un fournisseur:")
+            return
+        else:
+            nouvelle.nom_organisation = nomorganisation
+        
+        nouvelle.adresse1 = fournisseur.find( 'adresse1' ).text
+        nouvelle.adresse2 = fournisseur.find( 'adresse2' ).text
+        nouvelle.ville = fournisseur.find( 'ville' ).text
+        nouvelle.code_postal = fournisseur.find( 'codepostal' ).text
+        nouvelle.admissible = fournisseur.find( 'admissible' ).text
+        nouvelle.conforme = fournisseur.find( 'conforme' ).text
+        nouvelle.adjudicataire = fournisseur.find( 'adjudicataire' ).text
+        nouvelle.montant_soumis = fournisseur.find( 'montantsoumis' ).text
+        nouvelle.montant_contrat = fournisseur.find( 'montantcontrat' ).text
+        
+        code_p = fournisseur.find( 'province' ).text
+        if code_p:
+            nouvelle.province, created = Province.objects.get_or_create\
+                                (code=code_p ,defaults={'name': 'default'})
+
+        code_p = fournisseur.find( 'pays' ).text
+        if code_p:
+            nouvelle.pays, created = Pays.objects.get_or_create\
+                                (code=code_p ,defaults={'name': 'default'})
+
+        unite = fournisseur.find( 'montantssoumisunite' ).text
+        if not unite:
+            nouvelle.montant_soumis_unite, created = UniteMontant.objects.get_or_create\
+                                (code=unite ,defaults={'name': 'default'})
+
+        nouvelle.appel = avis
+        nouvelle.save()
     def get_urls(self):
         '''
         Return urls for files to download from seao.
@@ -111,6 +252,12 @@ class Command(BaseCommand):
         
     def extract_files(self, urls):
         print "Extracting data from local files :"
+        
+        if not urls:
+            print "No files to extract."
+            return
+
+        files_extracted = []
     
         for url in urls:
 
@@ -120,13 +267,17 @@ class Command(BaseCommand):
             zip_file_path = "%s%s" % (self.LOCAL_PATH, filename)
     
             with ZipFile(zip_file_path, 'r') as zip_file:
+                
                 zip_file.extractall(self.LOCAL_PATH)
-    
+
+                for file in zip_file.namelist():
+                    files_extracted.append(file)
+                
             print "From :"
             print zip_file_path
             print "Extracting all files to :"
             print "%s" % (self.LOCAL_PATH,)
+        
+        return files_extracted
 
-        if not urls:
-            print "No files to extract."
         

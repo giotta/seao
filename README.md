@@ -18,8 +18,6 @@ http://www.donnees.gouv.qc.ca/?node=/donnees-details&id=542483bf-3ea2-4074-b33c-
 Ces données reformattées sont mise à disposition pour la communauté à l'URL :
 http://seao.pourvotre.info/avis.json
 
-SEAO Ouvert utilise directement ces données reformattées.
-
 Aussi, les données sont reliées à des listes de valeurs décrites dans les
 spécifications :
 http://donnees.gouv.qc.ca/geonetwork/srv/en/resources.get?id=999&fname=SEAO_-_Spcifications_XML_donnes_ouvertes_-_20130418.pdf&access=private
@@ -51,8 +49,6 @@ cd seao
 virtualenv --no-site-packages --distribute env
 source env/bin/activate
 pip install -r requirements.txt
-#pip install django
-#pip install south
 
 # création de la base de données locale
 python manage.py syncdb --migrate
@@ -61,17 +57,10 @@ python manage.py syncdb --migrate
 # charger des données initiales
 python manage.py loaddata seao_ouvert/api/fixtures/donnees_champs.json
 
-# récupérer les données seao
-# étape facultative car données peuvent être récupérées à distance lors du chargement
-# si vous les voulez en local :
-# créer un répertoire data/ à la racine des sources du projet
-# sauvegarder ce fichier dans le répertoire data"
-# http://seao.pourvotre.info/avis.json
-# vous devriez alors avoir : data/avis.json
-
 # charger les données seao
-python manage.py load_avis
-# ou pour fichier local : python manage.py load_avis -f data/avis.json
+# l'operation peut prendre du temps, 
+# démarrez votre télésérie préférée.
+python manage.py syncdata
 
 # lancer le serveur en local
 python manage.py runserver
