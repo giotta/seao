@@ -72,10 +72,6 @@ class Command(BaseCommand):
         nouveau = Avis()
         nouveau.numero_seao = avis.find( 'numeroseao' ).text
         nouveau.numero = avis.find( 'numero' ).text
-
-        if not nouveau.numero:
-            self.stderr.write("Aucun numero d'avis : ligne {0}".append(line_number))
-            return
     
         nouveau.organisme = avis.find( 'organisme' ).text
         nouveau.municipal = int(avis.find( 'municipal' ).text)
@@ -149,8 +145,7 @@ class Command(BaseCommand):
         nomorganisation = fournisseur.find( 'nomorganisation' ).text
 
         if not nomorganisation:
-            self.stderr.write("aucun nom pour un fournisseur:")
-            return
+            nouvelle.nom_organisation = "default"
         else:
             nouvelle.nom_organisation = nomorganisation
         
@@ -181,6 +176,7 @@ class Command(BaseCommand):
 
         nouvelle.appel = avis
         nouvelle.save()
+
     def get_urls(self):
         '''
         Return urls for files to download from seao.
