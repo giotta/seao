@@ -62,9 +62,18 @@ class Command(BaseCommand):
         fichier = ElementTree.parse(self.LOCAL_PATH + file)
 
         data = fichier.getroot()
+        data_len = len(data)
+
+        print('0%'),
+
         for line_number, avis in enumerate(data):
+            
+            print ("\r{0}%".format(int(line_number/float(data_len)*100))),
+
             self.loader_avis(avis, line_number)
         
+
+        print('\r100%')
         print "\"{0}\" loaded successfully".format(file)
 
     def loader_avis(self, avis, line_number):
@@ -250,7 +259,7 @@ class Command(BaseCommand):
         print "Extracting data from local files :"
         
         if not urls:
-            print "No files to extract."
+            print "** No files to extract."
             return
 
         files_extracted = []
