@@ -122,7 +122,7 @@ class Avis(models.Model):
         null=True,
         )
     code_postal = models.CharField(
-        max_length=7,
+        max_length=20,
         blank=True,
         null=True,
         )
@@ -219,7 +219,7 @@ class Soumission(models.Model):
         null=True,
         )
     code_postal = models.CharField(
-        max_length=7,
+        max_length=20,
         blank=True,
         null=True,
         )
