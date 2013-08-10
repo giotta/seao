@@ -10,3 +10,7 @@
 #mainGrid {
     min-height: 600px;
 }
+
+ul.menu li {
+    display: inline;
+}

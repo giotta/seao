@@ -1,11 +1,12 @@
     <div role="main" ng-controller="MainCtrl">
       <div class="row">
-        <h1 class="span12">SEAO - Accès aux données ouvertes</h1>
+        <h1 class="span12">SEAO Ouvert</h1>
+        <h2 class="span12">Explorer les données</h2>
       </div>
       <div class="row">
         <form>
           <div class="span12">
-	    <label>Sélection des colonnes:</label>
+      	    <label>Sélection des colonnes:</label>
             <button data-ng-class="{'btn-primary': selectedColumns[col]}"
                     class="btn columnSelection"
                     ng-repeat="col in availColumns"

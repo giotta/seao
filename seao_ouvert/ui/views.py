@@ -4,6 +4,6 @@ from django.template import RequestContext
 def home(request):
     return render(
         {},
-        'home.html',
+        'ui/home.html',
         context_instance=RequestContext(request, {}),
         )

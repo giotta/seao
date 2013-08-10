@@ -10,7 +10,8 @@ avis_resource = AvisResource()
 
 urlpatterns = patterns(
     '',
-    url(r'^$', 'seao_ouvert.ui.views.home'),
+    url(r'^$', 'seao_ouvert.frontend.views.home', name='home'),
+    url(r'^explore/$', 'seao_ouvert.ui.views.home', name='ui'),
     url(r'^api/v1/', include(avis_resource.urls)),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('seao_ouvert.frontend.urls')),

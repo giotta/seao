@@ -1,18 +1,37 @@
 <!DOCTYPE html>
-<html ng-app="seao">
+<html lang="en" ng-app="seao" id="top">
   <head>
     <meta charset="utf-8">
     <title>SEAO Ouvert - Accès aux appels d'offres ouverts</title>
     <meta name="description" content="SEAO Ouvert - Accès aux appels d'offres ouverts">
+
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="{{STATIC_URL}}app.css" rel="stylesheet"/>
+    <link href="{{STATIC_URL}}ngGrid-2.0.6/ng-grid.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{STATIC_URL}}assets/select2.css"/>
+    {% block head %}{% endblock %}
   </head>
-  <body>
-    {% block content %}
-    {% endblock %}
-  </body>
-  <hr />
+  <header>
+    <h1>SEAO Ouvert</h1>
+    <p>
+    Accès aux données ouvertes sur les appels d'offres (seao) du Québec.
+    </p>
+    <ul class="menu">
+      <li><a href="{% url 'ui' %}">Explorer</a> | </li>
+      <li><a href="{% url 'avis_list' %}">Lister</a></li>
+    </ul>
+    <hr />
+  </header>
+  {% block body %}
+    <body>
+    {% block content %}{% endblock %}
+    </body>
+  {% endblock %}
   <footer>
-    <ul>
-      <li><a href="{% url 'legal' %}">Mentions légales</a></li>
+    <hr />
+    <ul class="menu">
+      <li><a href="{% url 'legal' %}">Mentions légales</a> | </li>
+      <li><a href="{% url 'credits' %}">Crédits</a></li>
     </ul>
   </footer>
 </html>

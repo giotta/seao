@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>100 avis sur {{ nb }}</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numéro SEAO</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for a in avis %}
+    <tr>
+      <td><a href="{% url "avis_detail" a.numero_seao %}">{{ a.numero_seao }}</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
