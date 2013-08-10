@@ -9,13 +9,13 @@ LICENSE.md
 
 ## Données
 
-SEAO Ouvert utilise des données ouvertes mise à disposition par le 
+SEAO Ouvert utilise des données ouvertes mises à disposition par le 
 Gouvernement du Québec.
 
 ### Source
 http://www.donnees.gouv.qc.ca/?node=/donnees-details&id=542483bf-3ea2-4074-b33c-34828f783995
 
-Ces données reformattées sont mise à disposition pour la communauté à l'URL :
+Ces données reformattées sont mises à la disposition de la communauté à l'URL :
 http://seao.pourvotre.info/avis.json
 
 Aussi, les données sont reliées à des listes de valeurs décrites dans les
@@ -35,7 +35,7 @@ web Django. Les autres dépendances logicielles sont déclarées dans
 requirements.txt
 
 ### Debian/Ubuntu
-Pour installer SEAO Ouvert sur distribution Linux basée sur Debian:
+Pour installer SEAO Ouvert sur une distribution Linux basée sur Debian:
 
 <pre>
 # cloner le dépôt git
@@ -58,7 +58,7 @@ python manage.py syncdb --migrate
 python manage.py loaddata seao_ouvert/api/fixtures/donnees_champs.json
 
 # charger les données seao
-# l'operation peut prendre du temps, 
+# l'opération peut prendre du temps, 
 # démarrez votre télésérie préférée.
 python manage.py syncdata
 
