@@ -3,7 +3,7 @@
 from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns(
-    'seao_ouvert.frontend.views',
+    'seao_ouvert.core.views',
     url(r'^avis/$', 'avis_list', name='avis_list'),
     url(r'^avis/(?P<id>\d+)', 'avis_detail', name='avis_detail'),
 

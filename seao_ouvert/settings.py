@@ -124,7 +124,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'seao_ouvert.api',
     'seao_ouvert.ui',
-    'seao_ouvert.frontend',
+    'seao_ouvert.core',
     'south',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
