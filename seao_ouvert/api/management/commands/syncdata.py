@@ -81,6 +81,7 @@ class Command(BaseCommand):
         nouveau = Avis()
         nouveau.numero_seao = avis.find( 'numeroseao' ).text
         nouveau.numero = avis.find( 'numero' ).text
+        nouveau.titre = avis.find( 'titre' ).text
     
         nouveau.organisme = avis.find( 'organisme' ).text
         nouveau.municipal = int(avis.find( 'municipal' ).text)
