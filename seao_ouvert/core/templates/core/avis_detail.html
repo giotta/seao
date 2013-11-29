@@ -15,6 +15,82 @@
       <td>Numéro SEAO</td>
       <td>{{ avis.numero_seao }}</td>
     </tr>
+    <tr>
+      <td>Titre</td>
+      <td>{{ avis.titre }}</td>
+    </tr>
+    <tr>
+      <td>Numero</td>
+      <td>{{ avis.numero }}</td>
+    </tr>
+    <tr>
+      <td>Municipale/Provinciale</td>
+      <td>{% if avis.municipal %}Municipale{% else %}Provinciale{% endif %}</td>
+    </tr>
+    <tr>
+      <td>Adresse</td>
+      <td>{{ avis.adresse1 }}</td>
+    </tr>
+    <tr>
+      <td>Adresse 2</td>
+      <td>{{ avis.adresse2 }}</td>
+    </tr>
+    <tr>
+      <td>Ville</td>
+      <td>{{ avis.ville }}</td>
+    </tr>
+    <tr>
+      <td>Province</td>
+      <td>{{ avis.province }}</td>
+    </tr>
+    <tr>
+      <td>Pays</td>
+      <td>{{ avis.pays }}</td>
+    </tr>
+    <tr>
+      <td>Code Postal</td>
+      <td>{{ avis.code_postal }}</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>{{ avis.type }}</td>
+    </tr>
+    <tr>
+      <td>Nature</td>
+      <td>{{ avis.nature }}</td>
+    </tr>
+    <tr>
+      <td>Date publication</td>
+      <td>{{ avis.date_publication }}</td>
+    </tr>
+    <tr>
+      <td>Date fermeture</td>
+      <td>{{ avis.date_fermeture }}</td>
+    </tr>
+    <tr>
+      <td>Date saisie d'adjudication</td>
+      <td>{{ avis.date_saisie_adjudication }}</td>
+    </tr>
+    <tr>
+      <td>Date adjucation</td>
+      <td>{{ avis.date_adjudication }}</td>
+    </tr>
+    <tr>
+      <td>Precision</td>
+      <td>{{ avis.precision }}</td>
+    </tr>
+    <tr>
+      <td>Disposition non municipale</td>
+      <td>{{ avis.disposition_non_municipale }}</td>
+    </tr>
+    <tr>
+      <td>Disposition municipale</td>
+      <td>{{ avis.disposition_municipale }}</td>
+    </tr>
+    <tr>
+      <td>Organisme</td>
+      <td>{{ avis.organisme }}</td>
+    </tr>
   </tbody>
 </table>
 {% endblock %}
