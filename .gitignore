@@ -10,6 +10,7 @@ db.sqlite3
 local_settings.py
 env
 dev.db
+dev.db-journal
 data/
 *#
 *.#*
