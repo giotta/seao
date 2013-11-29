@@ -52,15 +52,17 @@ class Command(BaseCommand):
             print "** No files to load into database"
             return
 
+        valid_files = [file for file in files if file.startswith('Avis')]
+
         i = 1
-        for file in files:
+        for file in valid_files:
             print "Loading %d/%d downloaded files into database" % (
-                i, len(files)
+                i, len(valid_files)
             )
             self.load_file(file)
             i += 1
 
-        print "{0} files loaded into database".format(len(files))
+        print "{0} files loaded into database".format(len(valid_files))
 
     def load_file(self, file):
 
