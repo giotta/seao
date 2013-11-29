@@ -1,16 +1,19 @@
 # TODO: clean up the import section.
-from django.core.management.base import BaseCommand
 from zipfile import ZipFile
-from seao_ouvert.api.models import *
 from optparse import make_option
-import datetime, urllib2
 from xml.etree import ElementTree
-from bs4 import BeautifulSoup
-import pdb
-from django.utils import timezone
 from urlparse import urlparse, parse_qs
 from os import listdir
+import pdb
+import datetime
+import urllib2
 
+from bs4 import BeautifulSoup
+from django.core.management.base import BaseCommand
+from django.utils import timezone
+from progressbar import ProgressBar, Percentage, Bar
+
+from seao_ouvert.api.models import *
 
 class Command(BaseCommand):
 
@@ -43,38 +46,45 @@ class Command(BaseCommand):
         print "END of local import from data source"
 
     def load_files(self, files):
-        
-        print "Loading downloaded files into database"
+
 
         if not files:
             print "** No files to load into database"
             return
-            
-        for file in files:
+
+        valid_files = [file for file in files if file.startswith('Avis')]
+
+        i = 1
+        for file in valid_files:
+            print "Loading %d/%d downloaded files into database" % (
+                i, len(valid_files)
+            )
             self.load_file(file)
-        
-        print "{0} files loaded into database".format(len(files))
+            i += 1
+
+        print "{0} files loaded into database".format(len(valid_files))
 
     def load_file(self, file):
-        
-        print "Loading \"{0}\" into database".format(file)
-    
+
+        #print "Loading \"{0}\" into database".format(file)
+
         fichier = ElementTree.parse(self.LOCAL_PATH + file)
 
         data = fichier.getroot()
         data_len = len(data)
 
-        print('0%'),
+        #print('0%'),
 
-        for line_number, avis in enumerate(data):
-            
-            print ("\r{0}%".format(int(line_number/float(data_len)*100))),
+        progress = ProgressBar(widgets=[Percentage(), Bar()])
+        for line_number, avis in progress(list(enumerate(data))):
+
+            #print ("\r{0}%".format(int(line_number/float(data_len)*100))),
 
             self.loader_avis(avis, line_number)
-        
 
-        print('\r100%')
-        print "\"{0}\" loaded successfully".format(file)
+
+        #print('\r100%')
+        #print "\"{0}\" loaded successfully".format(file)
 
     def loader_avis(self, avis, line_number):
 
@@ -82,7 +92,7 @@ class Command(BaseCommand):
         nouveau.numero_seao = avis.find( 'numeroseao' ).text
         nouveau.numero = avis.find( 'numero' ).text
         nouveau.titre = avis.find( 'titre' ).text
-    
+
         nouveau.organisme = avis.find( 'organisme' ).text
         nouveau.municipal = int(avis.find( 'municipal' ).text)
         nouveau.ville = avis.find( 'ville' ).text
@@ -93,7 +103,7 @@ class Command(BaseCommand):
         if nouveau.adresse2:
             nouveau.adresse2.encode("ascii","ignore")
         nouveau.code_postal = avis.find( 'codepostal' ).text
-        
+
         code_p = avis.find( 'province' ).text
         if code_p:
             nouveau.province, created = Province.objects.get_or_create\
@@ -103,7 +113,7 @@ class Command(BaseCommand):
         if code_p:
             nouveau.pays, created = Pays.objects.get_or_create\
                                    (code=code_p ,defaults={'name': 'default'})
-        
+
         code_t = avis.find( 'type' ).text
         if code_t:
             nouveau.type, created = Type.objects.get_or_create\
@@ -128,10 +138,10 @@ class Command(BaseCommand):
 
         date_adjudication = datetime.datetime.strptime(avis.find( 'dateadjudication' ).text, "%Y-%m-%d")
         date_adjudication = date_adjudication.replace(tzinfo=timezone.get_current_timezone())
-        nouveau.date_adjudication = date_adjudication 
+        nouveau.date_adjudication = date_adjudication
 
         #What's up avec le m2m et regions??
-        
+
         code_d = avis.find( 'disposition' ).text
         if nouveau.municipal and code_d:
 
@@ -147,7 +157,7 @@ class Command(BaseCommand):
 
         for fournisseur in avis.find( 'fournisseurs' ):
             self.loader_fournisseur(nouveau, fournisseur)
-           
+
     def loader_fournisseur(self, avis, fournisseur):
 
         nouvelle = Soumission()
@@ -158,7 +168,7 @@ class Command(BaseCommand):
             nouvelle.nom_organisation = "default"
         else:
             nouvelle.nom_organisation = nomorganisation
-        
+
         nouvelle.adresse1 = fournisseur.find( 'adresse1' ).text
         nouvelle.adresse2 = fournisseur.find( 'adresse2' ).text
         nouvelle.ville = fournisseur.find( 'ville' ).text
@@ -168,7 +178,7 @@ class Command(BaseCommand):
         nouvelle.adjudicataire = fournisseur.find( 'adjudicataire' ).text
         nouvelle.montant_soumis = fournisseur.find( 'montantsoumis' ).text
         nouvelle.montant_contrat = fournisseur.find( 'montantcontrat' ).text
-        
+
         code_p = fournisseur.find( 'province' ).text
         if code_p:
             nouvelle.province, created = Province.objects.get_or_create\
@@ -191,7 +201,7 @@ class Command(BaseCommand):
         '''
         Return urls for files to download from seao.
         '''
-        
+
         print "Finding urls of files to download from seao"
 
         page = urllib2.urlopen(self.URL_SEAO).read()
@@ -209,14 +219,14 @@ class Command(BaseCommand):
             print "* %s" % (url,)
 
         return urls
-    
+
     def get_urls_to_download(self, urls):
         '''
         Checks which files have to be downloaded
         '''
 
         urls_to_download = []
-        
+
         local_files = listdir(self.LOCAL_PATH)
 
         for url in urls:
@@ -233,57 +243,59 @@ class Command(BaseCommand):
             print "** No files to download from source"
 
         return urls_to_download
-    
+
     def download_files(self, urls):
-        print "Downloading data files from source :"
-    
-        for url in urls:
-            
+        print "Downloading %d files" % len(urls)
+
+        progress = ProgressBar(widgets=[Percentage(), Bar()])
+        for url in progress(urls):
+
             parsed_url = urlparse(url)
             filename = parse_qs(parsed_url.query)['fname'][0]
-            
+
             # Convert to non-unicode
             filename = str(filename)
 
             local_path = "%s%s" % (self.LOCAL_PATH, filename,)
-    
+
             zip_file = urllib2.urlopen(url)
-            
+
             with open(local_path,'wb') as f: f.write(zip_file.read())
-    
-            print "From :"
-            print url
-            print "Download to :"
-            print local_path
-        
+
+            #print "From :"
+            #print url
+            #print "Download to :"
+            #print local_path
+
     def extract_files(self, urls):
         print "Extracting data from local files :"
-        
+
         if not urls:
             print "** No files to extract."
             return
 
         files_extracted = []
-    
-        for url in urls:
+
+        progress = ProgressBar(widgets=[Percentage(), Bar()])
+        for url in progress(urls):
 
             parsed_url = urlparse(url)
             filename = parse_qs(parsed_url.query)['fname'][0]
-            
+
             zip_file_path = "%s%s" % (self.LOCAL_PATH, filename)
-    
+
             with ZipFile(zip_file_path, 'r') as zip_file:
-                
+
                 zip_file.extractall(self.LOCAL_PATH)
 
                 for file in zip_file.namelist():
                     files_extracted.append(file)
-                
-            print "From :"
-            print zip_file_path
-            print "Extracting all files to :"
-            print "%s" % (self.LOCAL_PATH,)
-        
+
+            #print "From :"
+            #print zip_file_path
+            #print "Extracting all files to :"
+            #print "%s" % (self.LOCAL_PATH,)
+
         return files_extracted
 
-        
+
