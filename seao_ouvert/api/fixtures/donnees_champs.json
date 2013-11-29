@@ -2542,5 +2542,149 @@
         "code": "12", 
         "name": "$/m3"
     }
+},
+{
+    "pk": 1,
+    "model": "api.region",
+    "fields": {
+        "code": "1",
+        "name": "Bas St-Laurent"
+    }
+},
+{
+    "pk": 2,
+    "model": "api.region",
+    "fields": {
+        "code": "2",
+        "name": "Saguenay-Lac-St-Jean"
+    }
+},
+{
+    "pk": 3,
+    "model": "api.region",
+    "fields": {
+        "code": "3",
+        "name": "Capitale Nationale"
+    }
+},
+{
+    "pk": 4,
+    "model": "api.region",
+    "fields": {
+        "code": "4",
+        "name": "Mauricie"
+    }
+},
+{
+    "pk": 5,
+    "model": "api.region",
+    "fields": {
+        "code": "5",
+        "name": "Estrie"
+    }
+},
+{
+    "pk": 6,
+    "model": "api.region",
+    "fields": {
+        "code": "6",
+        "name": "Montr\u00e9al"
+    }
+},
+{
+    "pk": 7,
+    "model": "api.region",
+    "fields": {
+        "code": "7",
+        "name": "Outaouais"
+    }
+},
+{
+    "pk": 8,
+    "model": "api.region",
+    "fields": {
+        "code": "8",
+        "name": "Abitibi-T\u00e9miscaminque"
+    }
+},
+{
+    "pk": 9,
+    "model": "api.region",
+    "fields": {
+        "code": "9",
+        "name": "C\u00f4te-Nord"
+    }
+},
+{
+    "pk": 10,
+    "model": "api.region",
+    "fields": {
+        "code": "11",
+        "name": "Nord-du-Qu\u00e9bec"
+    }
+},
+{
+    "pk": 11,
+    "model": "api.region",
+    "fields": {
+        "code": "12",
+        "name": "Chaudi\u00e8re-Appalaches"
+    }
+},
+{
+    "pk": 12,
+    "model": "api.region",
+    "fields": {
+        "code": "13",
+        "name": "Laval"
+    }
+},
+{
+    "pk": 13,
+    "model": "api.region",
+    "fields": {
+        "code": "14",
+        "name": "Laurentides"
+    }
+},
+{
+    "pk": 14,
+    "model": "api.region",
+    "fields": {
+        "code": "15",
+        "name": "Mont\u00e9r\u00e9gie"
+    }
+},
+{
+    "pk": 15,
+    "model": "api.region",
+    "fields": {
+        "code": "16",
+        "name": "Lanaudi\u00e8re"
+    }
+},
+{
+    "pk": 16,
+    "model": "api.region",
+    "fields": {
+        "code": "17",
+        "name": "Centre-du-Qu\u00e9bec"
+    }
+},
+{
+    "pk": 17,
+    "model": "api.region",
+    "fields": {
+        "code": "18",
+        "name": "Gasp\u00e9sie-Iles-de-la-Madeleine"
+    }
+},
+{
+    "pk": 18,
+    "model": "api.region",
+    "fields": {
+        "code": "19",
+        "name": "Hors Qu\u00e9bec"
+    }
 }
 ]
