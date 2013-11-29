@@ -10,8 +10,12 @@ db.sqlite3
 local_settings.py
 env
 dev.db
+dev.db-journal
 data/
 *#
 *.#*
 local.py
+*.iml
+*.iws
+*.ipr
 
