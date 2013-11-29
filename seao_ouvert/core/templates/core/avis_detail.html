@@ -40,6 +40,10 @@
       <td>{{ avis.ville }}</td>
     </tr>
     <tr>
+      <td>Regions</td>
+      <td>{% for region in avis.regions_livraison.all %}{{ region }} {% endfor %}</td>
+    </tr>
+    <tr>
       <td>Province</td>
       <td>{{ avis.province }}</td>
     </tr>
