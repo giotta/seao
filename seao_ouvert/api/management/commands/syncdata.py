@@ -138,8 +138,6 @@ class Command(BaseCommand):
         date_adjudication = date_adjudication.replace(tzinfo=timezone.get_current_timezone())
         nouveau.date_adjudication = date_adjudication
 
-        #What's up avec le m2m et regions??
-
         code_d = avis.find( 'disposition' ).text
         if nouveau.municipal and code_d:
 
@@ -152,6 +150,17 @@ class Command(BaseCommand):
 
         #Sauvegarder l'avis avait de lui attribuer des fournisseurs
         nouveau.save()
+
+        #WTF Django, Y U need a saved object for m2m?
+        regions = avis.find( 'regionlivraison' ).text
+        if regions:
+            for region in regions.split(','):
+                try:
+                    nouveau.regions_livraison.add(Region.objects.get(code=region))
+                except:
+                    print "Failed parsing regions for avis %s : %s" % (
+                        nouveau.numero, region
+                    )
 
         for fournisseur in avis.find( 'fournisseurs' ):
             self.loader_fournisseur(nouveau, fournisseur)
