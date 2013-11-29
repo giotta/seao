@@ -14,4 +14,7 @@ data/
 *#
 *.#*
 local.py
+*.iml
+*.iws
+*.ipr
 
