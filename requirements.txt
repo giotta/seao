@@ -4,3 +4,4 @@ django-tastypie
 simplejson
 beautifulsoup4
 mimeparse
+progressbar
